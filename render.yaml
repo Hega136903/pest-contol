@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pest-control-backend
+    env: node
+    rootDir: backend/backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://visvishwa6903:WVShFNsN8KPQuDg5@cluster0.o8y97az.mongodb.net/pest-control?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: sripriyan_super_secret_token_key_123
+      - key: EMAIL_USER
+        value: visvishwa6903@gmail.com
+      - key: EMAIL_PASS
+        value: WVShFNsN8KPQuDg5
