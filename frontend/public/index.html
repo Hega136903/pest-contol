@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#16a34a" />
+    <title>Chennai Pest Control</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      fetch('http://localhost:5000/api/bookings', {
+        method: 'GET', // or 'POST' depending on your API
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        // body: JSON.stringify(data) // include this line if you're sending data with POST
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    </script>
+    <script>
+      app.use(cors());
+    </script>
+  </body>
+</html>
