@@ -1,0 +1,62 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="300" fill="url(#bg)"/>
+  
+  <!-- House silhouette -->
+  <polygon points="150,200 200,150 250,200 250,250 150,250" fill="#16a34a" opacity="0.7"/>
+  <rect x="170" y="210" width="15" height="25" fill="#ffffff"/>
+  <rect x="215" y="190" width="20" height="15" fill="#ffffff"/>
+  
+  <!-- Trees -->
+  <circle cx="100" cy="200" r="30" fill="#22c55e" opacity="0.6"/>
+  <rect x="95" y="220" width="10" height="30" fill="#92400e"/>
+  
+  <circle cx="320" cy="180" r="25" fill="#22c55e" opacity="0.6"/>
+  <rect x="315" y="200" width="10" height="30" fill="#92400e"/>
+  
+  <!-- Pest control spray effect -->
+  <circle cx="400" cy="150" r="5" fill="#16a34a" opacity="0.3"/>
+  <circle cx="420" cy="140" r="3" fill="#16a34a" opacity="0.4"/>
+  <circle cx="440" cy="160" r="4" fill="#16a34a" opacity="0.2"/>
+  <circle cx="460" cy="145" r="6" fill="#16a34a" opacity="0.3"/>
+  
+  <!-- Main text overlay -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#16a34a" text-anchor="middle">
+    Chennai Pest Control
+  </text>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="18" fill="#374151" text-anchor="middle">
+    Professional • Eco-Friendly • Reliable
+  </text>
+  
+  <!-- Service icons -->
+  <g transform="translate(500, 170)">
+    <!-- Rodent icon -->
+    <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="8" ry="6" fill="#6b7280"/>
+    <circle cx="-3" cy="-2" r="1" fill="#000000"/>
+    <circle cx="3" cy="-2" r="1" fill="#000000"/>
+  </g>
+  
+  <g transform="translate(580, 170)">
+    <!-- Termite icon -->
+    <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect x="-6" y="-8" width="12" height="16" rx="6" fill="#8b5a2b"/>
+    <circle cx="-2" cy="-4" r="1" fill="#000000"/>
+    <circle cx="2" cy="-4" r="1" fill="#000000"/>
+  </g>
+  
+  <g transform="translate(660, 170)">
+    <!-- Cockroach icon -->
+    <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="7" ry="10" fill="#3c2415"/>
+    <circle cx="-2" cy="-5" r="1" fill="#ffffff"/>
+    <circle cx="2" cy="-5" r="1" fill="#ffffff"/>
+  </g>
+</svg>

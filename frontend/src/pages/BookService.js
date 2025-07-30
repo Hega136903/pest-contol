@@ -5,7 +5,7 @@ const initialState = {
   fullName: '',
   mobile: '',
   address: '',
-  service: 'Ant Control',
+  service: 'Rodent Control',
   preferredDate: '',
   preferredTime: ''
 };
@@ -45,7 +45,7 @@ const BookService = () => {
     <div className="px-4 py-8 max-w-lg mx-auto">
       <Helmet>
         <title>Book Pest Control Service | Chennai</title>
-        <meta name="description" content="Book ant, termite, cockroach pest control service in Chennai. Fast, reliable, affordable." />
+        <meta name="description" content="Book rodent, termite, cockroach pest control service in Chennai. Fast, reliable, affordable." />
       </Helmet>
       <h1 className="text-2xl font-bold text-primary mb-6">Book a Service</h1>
       <form className="bg-white rounded-lg shadow p-6 flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -53,7 +53,7 @@ const BookService = () => {
         <input name="mobile" value={form.mobile} onChange={handleChange} required placeholder="Mobile Number" className="border p-2 rounded" />
         <input name="address" value={form.address} onChange={handleChange} required placeholder="Address" className="border p-2 rounded" />
         <select name="service" value={form.service} onChange={handleChange} className="border p-2 rounded">
-          <option>Ant Control</option>
+          <option>Rodent Control</option>
           <option>Termite Control</option>
           <option>Cockroach Control</option>
         </select>

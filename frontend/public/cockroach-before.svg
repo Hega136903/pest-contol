@@ -1,0 +1,47 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#fef2f2"/>
+  
+  <!-- Kitchen/restaurant setting -->
+  <rect x="10" y="50" width="180" height="80" fill="#f8f4f0" stroke="#d4a574" stroke-width="1"/>
+  
+  <!-- Floor -->
+  <rect x="10" y="110" width="180" height="20" fill="#e5d4b1"/>
+  
+  <!-- Kitchen equipment/cabinets -->
+  <rect x="20" y="60" width="30" height="50" fill="#8b5a2b"/>
+  <rect x="160" y="65" width="25" height="45" fill="#8b5a2b"/>
+  
+  <!-- Multiple cockroaches -->
+  <ellipse cx="30" cy="85" rx="6" ry="4" fill="#4a2c17"/>
+  <ellipse cx="45" cy="75" rx="5" ry="3" fill="#4a2c17"/>
+  <ellipse cx="70" cy="90" rx="7" ry="4" fill="#4a2c17"/>
+  <ellipse cx="120" cy="80" rx="6" ry="4" fill="#4a2c17"/>
+  <ellipse cx="150" cy="95" rx="5" ry="3" fill="#4a2c17"/>
+  <ellipse cx="175" cy="85" rx="6" ry="4" fill="#4a2c17"/>
+  
+  <!-- Cockroach trails/droppings -->
+  <circle cx="55" cy="115" r="1" fill="#2d1810"/>
+  <circle cx="58" cy="117" r="0.8" fill="#2d1810"/>
+  <circle cx="90" cy="120" r="1" fill="#2d1810"/>
+  <circle cx="130" cy="118" r="0.8" fill="#2d1810"/>
+  <circle cx="165" cy="115" r="1" fill="#2d1810"/>
+  
+  <!-- Food contamination -->
+  <rect x="100" y="70" width="15" height="10" fill="#8b4513" opacity="0.7"/>
+  <circle cx="107" cy="75" r="2" fill="#4a2c17"/>
+  
+  <!-- Hiding spots/cracks -->
+  <path d="M15 55 Q20 60 25 55" stroke="#4a2c17" stroke-width="2" fill="none"/>
+  <path d="M170 70 Q175 75 180 70" stroke="#4a2c17" stroke-width="2" fill="none"/>
+  
+  <!-- Health hazard warnings -->
+  <circle cx="50" cy="40" r="15" fill="#dc2626" opacity="0.9"/>
+  <text x="50" y="45" text-anchor="middle" fill="white" font-size="12" font-weight="bold">!</text>
+  
+  <circle cx="150" cy="35" r="15" fill="#dc2626" opacity="0.9"/>
+  <text x="150" y="40" text-anchor="middle" fill="white" font-size="12" font-weight="bold">!</text>
+  
+  <!-- Title -->
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">COCKROACH INFESTATION</text>
+</svg>

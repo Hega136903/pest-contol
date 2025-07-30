@@ -5,11 +5,13 @@ const Footer = () => (
     <div className="mb-2">
       <strong>Chennai Pest Control</strong> &copy; 2025
     </div>
-    <div>
-      Address: 123, Anna Salai, Chennai, Tamil Nadu 600002 | Phone: +91-98765-43210
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
+      <span>Address: 201, Kamadhenu Nagar, Sheikmaniyam, Porur, Chennai 600116</span>
+      <span className="hidden sm:inline">|</span>
+      <span>Phone: +91-89393-20492</span>
     </div>
     <div className="mt-2 text-xs">
-      <span>Ant Control, Termite Control, Cockroach Control | Pest Control Chennai | Home & Commercial</span>
+      <span>Rodent Control, Termite Control, Cockroach Control | Pest Control Chennai | Home & Commercial</span>
     </div>
   </footer>
 );

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#f0fdf4"/>
+  
+  <!-- Clean kitchen/restaurant setting -->
+  <rect x="10" y="50" width="180" height="80" fill="#fefefe" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Clean floor -->
+  <rect x="10" y="110" width="180" height="20" fill="#f9f9f9"/>
+  
+  <!-- Sanitized kitchen equipment/cabinets -->
+  <rect x="20" y="60" width="30" height="50" fill="#d1d5db" stroke="#16a34a" stroke-width="1"/>
+  <rect x="160" y="65" width="25" height="45" fill="#d1d5db" stroke="#16a34a" stroke-width="1"/>
+  
+  <!-- Cleanliness indicators -->
+  <circle cx="35" cy="85" r="8" fill="#16a34a" opacity="0.8"/>
+  <path d="M31 85 L34 88 L39 82" stroke="white" stroke-width="2" fill="none"/>
+  
+  <circle cx="170" cy="87" r="8" fill="#16a34a" opacity="0.8"/>
+  <path d="M166 87 L169 90 L174 84" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Food safety area -->
+  <rect x="100" y="70" width="15" height="10" fill="#e5e7eb" stroke="#16a34a" stroke-width="1"/>
+  <circle cx="107" cy="75" r="2" fill="#16a34a"/>
+  
+  <!-- Sealed entry points -->
+  <path d="M15 55 Q20 60 25 55" stroke="#16a34a" stroke-width="3" fill="none"/>
+  <path d="M170 70 Q175 75 180 70" stroke="#16a34a" stroke-width="3" fill="none"/>
+  
+  <!-- Sanitization spray residue (safe) */
+  <g opacity="0.6">
+    <circle cx="60" cy="80" r="2" fill="#16a34a"/>
+    <circle cx="90" cy="85" r="1.5" fill="#16a34a"/>
+    <circle cx="130" cy="90" r="2" fill="#16a34a"/>
+  </g>
+  
+  <!-- Safety/hygiene certifications */
+  <circle cx="50" cy="40" r="15" fill="#16a34a" opacity="0.9"/>
+  <path d="M45 40 L48 43 L55 36" stroke="white" stroke-width="2" fill="none"/>
+  
+  <circle cx="150" cy="35" r="15" fill="#16a34a" opacity="0.9"/>
+  <path d="M145 35 L148 38 L155 31" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Sparkle effects for cleanliness -->
+  <g fill="#fbbf24" opacity="0.8">
+    <path d="M70 65 L71 67 L73 66 L71 69 L70 71 L69 69 L67 66 L69 67 Z"/>
+    <path d="M140 75 L141 77 L143 76 L141 79 L140 81 L139 79 L137 76 L139 77 Z"/>
+    <path d="M110 95 L111 97 L113 96 L111 99 L110 101 L109 99 L107 96 L109 97 Z"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">FOOD-SAFE KITCHEN</text>
+</svg>

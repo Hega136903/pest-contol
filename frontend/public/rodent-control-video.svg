@@ -1,0 +1,35 @@
+<svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="150" height="100" fill="#8b5a2b" opacity="0.8"/>
+  
+  <!-- Rodent control scene -->
+  <g transform="translate(15, 15)">
+    <!-- House/kitchen area -->
+    <rect x="20" y="25" width="90" height="40" fill="#f8f4f0"/>
+    
+    <!-- Technician with equipment -->
+    <rect x="10" y="35" width="8" height="15" fill="#3b82f6"/>
+    <circle cx="14" cy="30" r="4" fill="#fdbcbc"/>
+    <rect x="8" y="28" width="12" height="3" fill="#fbbf24"/>
+    
+    <!-- Rodent bait stations -->
+    <rect x="30" y="45" width="8" height="6" fill="#6b7280"/>
+    <rect x="60" y="50" width="8" height="6" fill="#6b7280"/>
+    <rect x="90" y="48" width="8" height="6" fill="#6b7280"/>
+    
+    <!-- Spray treatment -->
+    <rect x="5" y="40" width="10" height="5" fill="#4b5563"/>
+    <path d="M15 42 Q25 40 35 44" stroke="#16a34a" stroke-width="2" fill="none" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Rodent (being eliminated) -->
+    <ellipse cx="75" cy="55" rx="4" ry="2" fill="#8b5a2b" opacity="0.6">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Title overlay -->
+  <rect x="0" y="75" width="150" height="25" fill="#000000" opacity="0.7"/>
+  <text x="75" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">Rodent Control</text>
+</svg>
