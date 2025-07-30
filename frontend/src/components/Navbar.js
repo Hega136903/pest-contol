@@ -16,7 +16,10 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo and brand name */}
         <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
+          {/* Desktop logo */}
+          <img src="/logo.svg" alt="Logo" className="hidden sm:block h-8 w-8" />
+          {/* Mobile logo - larger and more visible */}
+          <img src="/logo-mobile.svg" alt="Logo" className="sm:hidden h-10 w-10" />
           <span className="font-bold text-lg sm:text-xl">
             <span className="hidden sm:inline">Chennai Pest Control</span>
             <span className="sm:hidden">Chennai Pest</span>
