@@ -1,23 +1,27 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import FAQSection from '../components/FAQSection';
 
 const testimonials = [
   {
     name: 'Vasanth A.',
+    area: 'Velachery',
     text: 'Quick and professional rodent control service. Highly recommended in Chennai!'
   },
   {
     name: 'Vishwa S.',
+    area: 'Tambaram',
     text: 'Termite treatment was effective and affordable. Great team!'
   },
   {
     name: 'Mahesh M.',
+    area: 'Anna Nagar',
     text: 'No more cockroaches! Booking was easy and service was prompt.'
   }
 ];
 
-const Home = () => (
+const Home = ({ onBookClick }) => (
   <div className="px-4 py-8 max-w-4xl mx-auto">
     <Helmet>
       <title>Pest Control Chennai | Rodent, Termite, Cockroach | Book Now</title>
@@ -30,13 +34,43 @@ const Home = () => (
           <img src="/hero.svg" alt="Pest Control Chennai" className="w-full h-40 sm:h-48 object-cover rounded-lg" />
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left px-2 md:px-0">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">Welcome to Chennai Pest Control</h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 leading-relaxed">Expert Rodent, Termite & Cockroach Control for Homes & Businesses</p>
-          <Link to="/book" className="inline-block bg-primary text-white px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-green-700 font-medium text-sm sm:text-base">Book Now</Link>
+          <div className="mb-3">
+            <span className="inline-block bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">4.7 stars rating | 500+ Homes Protected</span>
+          </div>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3">Chennai's Trusted Pest Control Experts</h1>
+          <p className="text-sm sm:text-base text-gray-700 mb-4 font-semibold">500+ Homes Protected | Eco Safe Treatment | Same Day Visit</p>
+          <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
+            <span className="text-xs bg-green-50 text-green-800 px-2 py-1 rounded">Safe for children & pets</span>
+            <span className="text-xs bg-blue-50 text-blue-800 px-2 py-1 rounded">Serving Chennai</span>
+            <span className="text-xs bg-orange-50 text-orange-800 px-2 py-1 rounded">Same day service</span>
+          </div>
+          <div className="flex gap-3 justify-center md:justify-start">
+            <Link to="/book" className="inline-block bg-primary text-white px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-green-700 font-medium text-sm sm:text-base">Book Now</Link>
+            <button onClick={onBookClick} className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base border-2 border-primary">Free Inspection</button>
+          </div>
         </div>
       </div>
     </section>
-    
+
+    {/* Customer Reviews Section */}
+    <section className="mb-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 sm:p-8">
+      <h2 className="text-2xl font-bold text-primary mb-6 text-center">What Chennai Customers Say</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {testimonials.map((t, i) => (
+          <div key={i} className="bg-white rounded-lg shadow p-4 border-l-4 border-primary">
+            <div className="flex items-center mb-2">
+              <span className="text-yellow-400 text-sm">5 stars</span>
+            </div>
+            <p className="text-sm text-gray-700 mb-3 italic">"{t.text}"</p>
+            <div className="border-t pt-2">
+              <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
+              {t.area && <p className="text-xs text-gray-500">{t.area}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
     {/* Before/After Services Section */}
     <section className="mb-12">
       <div className="text-center mb-8">
@@ -339,17 +373,8 @@ const Home = () => (
         <p className="text-sm text-gray-600 leading-relaxed">Odorless, child-safe cockroach control for homes and restaurants.</p>
       </div>
     </section>
-    <section className="mb-8">
-      <h2 className="text-xl font-bold text-primary mb-4">Testimonials</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {testimonials.map((t, i) => (
-          <div key={i} className="bg-white rounded-lg shadow p-6">
-            <p className="text-gray-700 italic leading-relaxed">"{t.text}"</p>
-            <div className="mt-3 text-right text-primary font-semibold">- {t.name}</div>
-          </div>
-        ))}
-      </div>
-    </section>
+
+    <FAQSection />
   </div>
 );
 
