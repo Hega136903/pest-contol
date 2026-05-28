@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ onBookClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,17 +33,17 @@ const Navbar = ({ onBookClick }) => {
           <a href="/services" className="hover:underline px-2 py-1">Services</a>
           <a href="/about" className="hover:underline px-2 py-1">About</a>
           <a href="/contact" className="hover:underline px-2 py-1">Contact</a>
-          <a href="/admin" className="hover:underline px-2 py-1 text-xs">Admin</a>
-          <button onClick={onBookClick} className="bg-white text-primary font-semibold px-4 py-2 rounded hover:bg-gray-100 transition-colors">
+          <a href="/admin" className="hover:underline px-2 py-1">Admin</a>
+          <Link to="/book" className="bg-white text-primary font-semibold px-4 py-2 rounded hover:bg-gray-100 transition-colors inline-block">
             Book Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile: Book Now button visible on larger mobile */}
         <div className="hidden sm:flex md:hidden gap-2">
-          <button onClick={onBookClick} className="bg-white text-primary font-semibold px-3 py-2 rounded text-sm hover:bg-gray-100 transition-colors">
+          <Link to="/book" className="bg-white text-primary font-semibold px-3 py-2 rounded text-sm hover:bg-gray-100 transition-colors inline-block">
             Book Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile hamburger button */}
@@ -65,7 +66,7 @@ const Navbar = ({ onBookClick }) => {
           <a href="/about" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>About</a>
           <a href="/contact" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Contact</a>
           <a href="/admin" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Admin</a>
-          <button onClick={() => { onBookClick(); closeMenu(); }} className="hover:bg-green-700 px-4 py-3 text-left w-full font-semibold">Book Free Inspection</button>
+          <a href="/book" className="hover:bg-green-700 px-4 py-3 text-left w-full font-semibold block border-b border-green-600" onClick={closeMenu}>Book Service</a>
         </div>
       </div>
     </nav>
