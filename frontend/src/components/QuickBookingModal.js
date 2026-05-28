@@ -18,6 +18,7 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
     setSuccess('');
 
     try {
+      const today = new Date().toISOString().split('T')[0];
       const response = await fetch('https://pest-contol.onrender.com/api/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -25,7 +26,9 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
           fullName: form.fullName,
           mobile: form.mobile,
           service: form.service,
-          address: 'Quick Booking'
+          address: 'Quick Booking',
+          preferredDate: today,
+          preferredTime: '09:00 AM'
         })
       });
 
