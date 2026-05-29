@@ -1,0 +1,46 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#f3f4f6" stroke="#16a34a" stroke-width="3"/>
+  
+  <!-- Cockroach body -->
+  <ellipse cx="100" cy="100" rx="25" ry="35" fill="#3c2415"/>
+  
+  <!-- Body segments -->
+  <ellipse cx="100" cy="85" rx="22" ry="8" fill="#4a2c17" opacity="0.7"/>
+  <ellipse cx="100" cy="100" rx="24" ry="8" fill="#4a2c17" opacity="0.7"/>
+  <ellipse cx="100" cy="115" rx="20" ry="8" fill="#4a2c17" opacity="0.7"/>
+  
+  <!-- Head -->
+  <ellipse cx="100" cy="68" rx="12" ry="8" fill="#3c2415"/>
+  
+  <!-- Eyes -->
+  <circle cx="95" cy="65" r="3" fill="#ffffff"/>
+  <circle cx="105" cy="65" r="3" fill="#ffffff"/>
+  <circle cx="95" cy="65" r="1.5" fill="#000000"/>
+  <circle cx="105" cy="65" r="1.5" fill="#000000"/>
+  
+  <!-- Antennae -->
+  <path d="M92 60 Q85 45 80 35" stroke="#2d1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M108 60 Q115 45 120 35" stroke="#2d1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Legs -->
+  <line x1="80" y1="80" x2="65" y2="75" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="80" x2="135" y2="75" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="78" y1="95" x2="60" y2="95" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="122" y1="95" x2="140" y2="95" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="110" x2="65" y2="115" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="110" x2="135" y2="115" stroke="#2d1810" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Wings -->
+  <ellipse cx="88" cy="90" rx="8" ry="20" fill="#5d3a23" opacity="0.6" transform="rotate(-15 88 90)"/>
+  <ellipse cx="112" cy="90" rx="8" ry="20" fill="#5d3a23" opacity="0.6" transform="rotate(15 112 90)"/>
+  
+  <!-- Red "X" for elimination -->
+  <line x1="60" y1="60" x2="140" y2="140" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  <line x1="140" y1="60" x2="60" y2="140" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">
+    COCKROACH CONTROL
+  </text>
+</svg>

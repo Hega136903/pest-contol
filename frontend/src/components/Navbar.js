@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ onBookClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,9 +18,9 @@ const Navbar = () => {
         {/* Logo and brand name */}
         <div className="flex items-center gap-2">
           {/* Desktop logo */}
-          <img src="/logo.svg" alt="Logo" className="hidden sm:block h-8 w-8" />
+          <img src="/logo.png" alt="Logo" className="hidden sm:block h-8 w-8" />
           {/* Mobile logo - larger and more visible */}
-          <img src="/logo-mobile.svg" alt="Logo" className="sm:hidden h-10 w-10" />
+          <img src="/logo.png" alt="Logo" className="sm:hidden h-10 w-10" />
           <span className="font-bold text-lg sm:text-xl">
             <span className="hidden sm:inline">Chennai Pest Control</span>
             <span className="sm:hidden">Chennai Pest</span>
@@ -27,17 +28,26 @@ const Navbar = () => {
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 items-center">
           <a href="/" className="hover:underline px-2 py-1">Home</a>
           <a href="/services" className="hover:underline px-2 py-1">Services</a>
-          <a href="/book" className="hover:underline px-2 py-1">Book Service</a>
           <a href="/about" className="hover:underline px-2 py-1">About</a>
           <a href="/contact" className="hover:underline px-2 py-1">Contact</a>
           <a href="/admin" className="hover:underline px-2 py-1">Admin</a>
+          <Link to="/book" className="bg-white text-primary font-semibold px-4 py-2 rounded hover:bg-gray-100 transition-colors inline-block">
+            Book Now
+          </Link>
+        </div>
+
+        {/* Mobile: Book Now button visible on larger mobile */}
+        <div className="hidden sm:flex md:hidden gap-2">
+          <Link to="/book" className="bg-white text-primary font-semibold px-3 py-2 rounded text-sm hover:bg-gray-100 transition-colors inline-block">
+            Book Now
+          </Link>
         </div>
 
         {/* Mobile hamburger button */}
-        <button 
+        <button
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -53,10 +63,10 @@ const Navbar = () => {
         <div className="flex flex-col py-2">
           <a href="/" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Home</a>
           <a href="/services" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Services</a>
-          <a href="/book" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Book Service</a>
           <a href="/about" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>About</a>
           <a href="/contact" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Contact</a>
-          <a href="/admin" className="hover:bg-green-700 px-4 py-3" onClick={closeMenu}>Admin</a>
+          <a href="/admin" className="hover:bg-green-700 px-4 py-3 border-b border-green-600" onClick={closeMenu}>Admin</a>
+          <a href="/book" className="hover:bg-green-700 px-4 py-3 text-left w-full font-semibold block border-b border-green-600" onClick={closeMenu}>Book Service</a>
         </div>
       </div>
     </nav>

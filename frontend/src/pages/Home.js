@@ -1,27 +1,37 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import FAQSection from '../components/FAQSection';
 
 const testimonials = [
   {
     name: 'Vasanth A.',
     area: 'Velachery',
-    text: 'Quick, professional, and very careful around our kitchen. The team explained everything clearly.'
+    text: 'Quick and professional rodent control service. Highly recommended in Chennai!'
   },
   {
     name: 'Vishwa S.',
     area: 'Tambaram',
-    text: 'We booked in the morning and got same-day service. The house feels safe and pest-free now.'
+    text: 'Termite treatment was effective and affordable. Great team!'
   },
   {
     name: 'Mahesh M.',
     area: 'Anna Nagar',
-    text: 'Booking was easy, the visit was on time, and the results were better than expected.'
+    text: 'No more cockroaches! Booking was easy and service was prompt.'
   }
 ];
 
-const Home = () => (
-  <div className="px-4 py-8 max-w-4xl mx-auto">
+const Home = ({ onBookClick }) => (
+  <div className="px-4 py-8 max-w-4xl mx-auto relative">
+    {/* 25% Off Badge */}
+    <div className="fixed left-3 top-40 z-40 bg-red-600 text-white rounded-lg px-3 py-2 shadow-lg hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all"
+      onClick={() => window.location.href = '/book'}
+      title="Click for 25% offer">
+      <div className="text-center">
+        <div className="text-xl font-black">25%</div>
+        <div className="text-xs font-bold">OFF</div>
+      </div>
+    </div>
     <Helmet>
       <title>Pest Control Chennai | Rodent, Termite, Cockroach | Book Now</title>
       <meta name="description" content="Best pest control services in Chennai for Rodent, Termite, Cockroach. Book online for home & commercial pest control." />
@@ -30,25 +40,46 @@ const Home = () => (
     <section className="mb-8">
       <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
         <div className="w-full md:w-1/2">
-          <img src="/hero.svg" alt="Pest Control Chennai" className="w-full h-40 sm:h-48 object-cover rounded-lg" />
+          <img src="/hero.png" alt="Pest Control Chennai" className="w-full h-40 sm:h-48 object-cover rounded-lg" />
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left px-2 md:px-0">
-          <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-3">
-            <span aria-hidden="true">★★★★★</span>
-            <span>4.9/5 customer rating</span>
+          <div className="mb-3">
+            <span className="inline-block bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">4.7 stars rating | 500+ Homes Protected</span>
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">Chennai&apos;s Trusted Pest Control Experts</h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-3 leading-relaxed">500+ Homes Protected | Eco Safe Treatment | Same Day Visit</p>
-          <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-            <span className="bg-green-50 text-green-800 text-xs sm:text-sm font-medium px-3 py-1 rounded-full">Safe for children &amp; pets</span>
-            <span className="bg-blue-50 text-blue-800 text-xs sm:text-sm font-medium px-3 py-1 rounded-full">Serving Chennai</span>
-            <span className="bg-orange-50 text-orange-800 text-xs sm:text-sm font-medium px-3 py-1 rounded-full">Same day service</span>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3">Chennai's Trusted Pest Control Experts</h1>
+          <p className="text-sm sm:text-base text-gray-700 mb-4 font-semibold">500+ Homes Protected | Eco Safe Treatment | Same Day Visit</p>
+          <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
+            <span className="text-xs bg-green-50 text-green-800 px-2 py-1 rounded">Safe for children & pets</span>
+            <span className="text-xs bg-blue-50 text-blue-800 px-2 py-1 rounded">Serving Chennai</span>
+            <span className="text-xs bg-orange-50 text-orange-800 px-2 py-1 rounded">Same day service</span>
           </div>
-          <Link to="/book" className="inline-block bg-primary text-white px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-green-700 font-medium text-sm sm:text-base">Book Now</Link>
+          <div className="flex gap-3 justify-center md:justify-start">
+            <Link to="/book" className="inline-block bg-primary text-white px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-green-700 font-medium text-sm sm:text-base">Book Now</Link>
+            <button onClick={onBookClick} className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base border-2 border-primary">Free Inspection</button>
+          </div>
         </div>
       </div>
     </section>
-    
+
+    {/* Customer Reviews Section */}
+    <section className="mb-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 sm:p-8">
+      <h2 className="text-2xl font-bold text-primary mb-6 text-center">What Chennai Customers Say</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {testimonials.map((t, i) => (
+          <div key={i} className="bg-white rounded-lg shadow p-4 border-l-4 border-primary">
+            <div className="flex items-center mb-2">
+              <span className="text-yellow-400 text-sm">5 stars</span>
+            </div>
+            <p className="text-sm text-gray-700 mb-3 italic">"{t.text}"</p>
+            <div className="border-t pt-2">
+              <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
+              {t.area && <p className="text-xs text-gray-500">{t.area}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
     {/* Before/After Services Section */}
     <section className="mb-12">
       <div className="text-center mb-8">
@@ -64,13 +95,13 @@ const Home = () => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/before-service.svg" alt="Before Rodent Control" className="w-full h-24 object-contain rounded" />
+                <img src="/rat.webp" alt="Before Rodent Control" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Rat droppings & damage</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
-                <img src="/after-service.svg" alt="After Rodent Control" className="w-full h-24 object-contain rounded" />
+                <img src="/rat-after.png" alt="After Rodent Control" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-green-600">After: 100% rodent-free</span>
             </div>
@@ -86,7 +117,7 @@ const Home = () => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/termite-before.svg" alt="Before Termite Control" className="w-full h-24 object-contain rounded" />
+                <img src="/termite-control-service-in-ahmedabad-500x500.webp" alt="Before Termite Control" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Wood damage & tunnels</span>
             </div>
@@ -108,7 +139,7 @@ const Home = () => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/cockroach-before.svg" alt="Before Cockroach Control" className="w-full h-24 object-contain rounded" />
+                <img src="/cockroaches-pest-control-services-1499757056-3120325-1000x1000.webp" alt="Before Cockroach Control" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Heavy infestation</span>
             </div>
@@ -132,7 +163,7 @@ const Home = () => (
           {/* Main Service Video */}
           <div className="bg-white rounded-lg p-4 shadow-md">
             <div className="bg-gray-200 rounded-lg h-48 md:h-56 flex items-center justify-center mb-4 relative overflow-hidden cursor-pointer group">
-              <img src="/service-video-thumbnail.svg" alt="Professional Pest Control Service" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+              <img src="/pestcontrol-thumbnail.png" alt="Professional Pest Control Service" className="w-full h-full object-contain transition-transform group-hover:scale-105" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                 <button 
                   className="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center hover:bg-gray-100 transition-all transform hover:scale-110"
@@ -161,11 +192,11 @@ const Home = () => (
           {/* Service Types Video Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=RODENT_VIDEO_ID', '_blank')}
               >
-                <img src="/rodent-control-video.svg" alt="Rodent Control" className="w-full h-full object-cover rounded" />
+                <img src="/rodent-pest-control-services-500x500.webp" alt="Rodent Control" className="w-full h-full object-contain rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -182,11 +213,11 @@ const Home = () => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=TERMITE_VIDEO_ID', '_blank')}
               >
-                <img src="/termite-treatment-video.svg" alt="Termite Treatment" className="w-full h-full object-cover rounded" />
+                <img src="/termite-control-service-in-ahmedabad-500x500.webp" alt="Termite Treatment" className="w-full h-full object-contain rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -203,11 +234,11 @@ const Home = () => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=COCKROACH_VIDEO_ID', '_blank')}
               >
-                <img src="/cockroach-control-video.svg" alt="Cockroach Control" className="w-full h-full object-cover rounded" />
+                <img src="/cockroaches-pest-control-services-1499757056-3120325-1000x1000.webp" alt="Cockroach Control" className="w-full h-full object-contain rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -224,11 +255,11 @@ const Home = () => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=SAFETY_VIDEO_ID', '_blank')}
               >
-                <img src="/safety-methods-video.svg" alt="Safety Methods" className="w-full h-full object-cover rounded" />
+                <img src="/OIP.webp" alt="Safety Methods" className="w-full h-full object-contain rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -261,7 +292,7 @@ const Home = () => (
       {/* Detailed Process Steps */}
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
         <h3 className="text-2xl font-semibold text-primary mb-6 text-center">Our Professional 6-Step Process</h3>
-        
+
         {/* Mobile Version - Compact */}
         <div className="block md:hidden">
           <div className="grid grid-cols-2 gap-4">
@@ -297,7 +328,7 @@ const Home = () => (
             </div>
           </div>
         </div>
-        
+
         {/* Desktop Version - Detailed */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col items-center text-center">
@@ -333,7 +364,7 @@ const Home = () => (
         </div>
       </div>
     </section>
-    
+
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
         <img src="/rodent.svg" alt="Rodent Control" className="h-20 w-20 object-contain mb-3" />
@@ -351,26 +382,8 @@ const Home = () => (
         <p className="text-sm text-gray-600 leading-relaxed">Odorless, child-safe cockroach control for homes and restaurants.</p>
       </div>
     </section>
-    <section className="mb-8">
-      <div className="text-center mb-5">
-        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">What Chennai Customers Say</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">Real-feeling demo reviews help the layout feel complete while still matching the local-service tone.</p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {testimonials.map((t, i) => (
-          <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <div>
-                <h3 className="font-semibold text-gray-900 text-lg">{t.name}</h3>
-                <p className="text-sm text-gray-500">{t.area}</p>
-              </div>
-              <div className="flex text-yellow-400 text-sm" aria-label="5 star review">★★★★★</div>
-            </div>
-            <p className="text-gray-700 leading-relaxed">“{t.text}”</p>
-          </div>
-        ))}
-      </div>
-    </section>
+
+    <FAQSection />
   </div>
 );
 

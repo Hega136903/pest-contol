@@ -48,6 +48,9 @@ const BookService = () => {
         <meta name="description" content="Book rodent, termite, cockroach pest control service in Chennai. Fast, reliable, affordable." />
       </Helmet>
       <h1 className="text-2xl font-bold text-primary mb-6">Book a Service</h1>
+      <div className="mb-4 bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 text-sm font-semibold">
+        25% OFF • Limited Time Offer
+      </div>
       <form className="bg-white rounded-lg shadow p-6 flex flex-col gap-4" onSubmit={handleSubmit}>
         <input name="fullName" value={form.fullName} onChange={handleChange} required placeholder="Full Name" className="border p-2 rounded" />
         <input name="mobile" value={form.mobile} onChange={handleChange} required placeholder="Mobile Number" className="border p-2 rounded" />

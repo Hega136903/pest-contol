@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#f0fdf4"/>
+  
+  <!-- Clean kitchen/restaurant setting -->
+  <rect x="10" y="50" width="180" height="80" fill="#fefefe" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Clean floor -->
+  <rect x="10" y="110" width="180" height="20" fill="#f9f9f9"/>
+  
+  <!-- Sanitized kitchen equipment/cabinets -->
+  <rect x="20" y="60" width="30" height="50" fill="#e5e7eb" stroke="#16a34a" stroke-width="1"/>
+  <rect x="160" y="65" width="25" height="45" fill="#e5e7eb" stroke="#16a34a" stroke-width="1"/>
+  
+  <!-- Cleanliness checkmarks -->
+  <circle cx="35" cy="85" r="10" fill="#16a34a" opacity="0.9"/>
+  <path d="M30 85 L33 88 L40 81" stroke="white" stroke-width="2" fill="none"/>
+  
+  <circle cx="170" cy="87" r="10" fill="#16a34a" opacity="0.9"/>
+  <path d="M165 87 L168 90 L175 83" stroke="white" stroke-width="2" fill="none"/>
+  
+  <circle cx="100" cy="75" r="10" fill="#16a34a" opacity="0.9"/>
+  <path d="M95 75 L98 78 L105 71" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Food safety area (clean) -->
+  <rect x="90" y="70" width="20" height="15" fill="#f3f4f6" stroke="#16a34a" stroke-width="1"/>
+  <circle cx="100" cy="77" r="3" fill="#16a34a"/>
+  
+  <!-- Protective barrier representation -->
+  <rect x="8" y="48" width="184" height="84" fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="8,4" opacity="0.6"/>
+  
+  <!-- Sparkle effects for cleanliness -->
+  <g fill="#fbbf24" opacity="0.8">
+    <g transform="translate(60,65)">
+      <path d="M0 -5 L2 -1 L6 -2 L2 1 L0 5 L-2 1 L-6 -2 L-2 -1 Z"/>
+    </g>
+    <g transform="translate(140,95)">
+      <path d="M0 -4 L1.5 -1 L4 -1 L1.5 1 L0 4 L-1.5 1 L-4 -1 L-1.5 -1 Z"/>
+    </g>
+    <g transform="translate(120,85)">
+      <path d="M0 -3 L1 -1 L3 -1 L1 1 L0 3 L-1 1 L-3 -1 L-1 -1 Z"/>
+    </g>
+  </g>
+  
+  <!-- Clean surfaces indication -->
+  <rect x="50" y="100" width="100" height="8" fill="#e5e7eb" rx="4"/>
+  <text x="100" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#16a34a">SANITIZED SURFACE</text>
+  
+  <!-- Title -->
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">PEST-FREE KITCHEN</text>
+</svg>
