@@ -22,16 +22,7 @@ const testimonials = [
 ];
 
 const Home = ({ onBookClick }) => (
-  <div className="px-4 py-8 max-w-4xl mx-auto relative">
-    {/* 25% Off Badge */}
-    <div className="fixed left-3 top-40 z-40 bg-red-600 text-white rounded-lg px-3 py-2 shadow-lg hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all"
-      onClick={() => window.location.href = '/book'}
-      title="Click for 25% offer">
-      <div className="text-center">
-        <div className="text-xl font-black">25%</div>
-        <div className="text-xs font-bold">OFF</div>
-      </div>
-    </div>
+  <div className="px-4 py-8 max-w-4xl mx-auto">
     <Helmet>
       <title>Pest Control Chennai | Rodent, Termite, Cockroach | Book Now</title>
       <meta name="description" content="Best pest control services in Chennai for Rodent, Termite, Cockroach. Book online for home & commercial pest control." />
