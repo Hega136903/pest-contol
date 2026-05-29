@@ -1,0 +1,14 @@
+# Robots.txt for Chennai Pest Control
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow private/admin pages
+Disallow: /admin
+
+# Point to sitemap
+Sitemap: https://vishwa-pestcontrol.vercel.app/sitemap.xml
+
+# Crawl delay (optional - prevent server overload)
+Crawl-delay: 1
