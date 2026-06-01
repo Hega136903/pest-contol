@@ -44,8 +44,9 @@ const BookService = () => {
   return (
     <div className="px-4 py-8 max-w-lg mx-auto">
       <Helmet>
-        <title>Book Pest Control Service | Chennai</title>
-        <meta name="description" content="Book rodent, termite, cockroach pest control service in Chennai. Fast, reliable, affordable." />
+        <title>Book Pest Control Service | Chennai | Quick & Easy</title>
+        <meta name="description" content="Book rodent, termite, cockroach pest control service in Chennai. Same day service available. Quick, reliable, and affordable. Get 25% off!" />
+        <meta name="keywords" content="book pest control, pest control booking, Chennai pest services" />
       </Helmet>
       <h1 className="text-2xl font-bold text-primary mb-6">Book a Service</h1>
       <div className="mb-4 bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 text-sm font-semibold">

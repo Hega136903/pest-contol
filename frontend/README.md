@@ -49,7 +49,7 @@
 
 ## Admin Login
 - Username: `admin`
-- Password: `................`
+- Password: `pestchennai2025`
 
 ## Booking API
 - POST `/api/bookings` (see backend README)

@@ -11,7 +11,7 @@ const Footer = () => (
       <span>Phone: +91-89393-20492</span>
     </div>
     <div className="mt-2 text-xs">
-      <span>Rodent Control, Termite Control, Cockroach Control | Pest Control Chennai | Home & Commercial</span>
+      <span>Professional Pest Control Chennai | Rodent Control | Termite Control | Cockroach Control | Mosquito Control | Residential & Commercial Pest Control | Best Pest Control Near Me</span>
     </div>
   </footer>
 );

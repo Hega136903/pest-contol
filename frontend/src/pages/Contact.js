@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet';
 const Contact = () => (
   <div className="px-4 py-8 max-w-lg mx-auto">
     <Helmet>
-      <title>Contact | Chennai Pest Control</title>
-      <meta name="description" content="Contact Chennai Pest Control for rodent, termite, cockroach services in Chennai." />
+      <title>Contact Us | Chennai Pest Control | Get Support</title>
+      <meta name="description" content="Contact Chennai Pest Control. Phone: +91-89393-20492. 24/7 support for rodent, termite, cockroach control in Chennai. WhatsApp chat available!" />
+      <meta name="keywords" content="contact pest control, pest control support, Chennai pest services contact" />
     </Helmet>
     <h1 className="text-2xl font-bold text-primary mb-4">Contact Us</h1>
     <div className="bg-white rounded-lg shadow p-6">

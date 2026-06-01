@@ -18,9 +18,9 @@ const Navbar = ({ onBookClick }) => {
         {/* Logo and brand name */}
         <div className="flex items-center gap-2">
           {/* Desktop logo */}
-          <img src="/logo.png" alt="Logo" className="hidden sm:block h-8 w-8" />
+          <img src="/logo.png" alt="Vishwa Pest Control - Professional Chennai Pest Control Services Logo" className="hidden sm:block h-8 w-8" />
           {/* Mobile logo - larger and more visible */}
-          <img src="/logo.png" alt="Logo" className="sm:hidden h-10 w-10" />
+          <img src="/logo.png" alt="Vishwa Pest Control - Professional Chennai Pest Control Services Logo" className="sm:hidden h-10 w-10" />
           <span className="font-bold text-lg sm:text-xl">
             <span className="hidden sm:inline">Chennai Pest Control</span>
             <span className="sm:hidden">Chennai Pest</span>
