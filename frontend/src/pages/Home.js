@@ -180,7 +180,7 @@ const Home = ({ onBookClick }) => (
         {testimonials.map((t, i) => (
           <div key={i} className="bg-white rounded-lg shadow p-4 border-l-4 border-primary">
             <div className="flex items-center mb-2">
-              <span className="text-yellow-400 text-sm">5 stars</span>
+              <span className="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
             </div>
             <p className="text-sm text-gray-700 mb-3 italic">"{t.text}"</p>
             <div className="border-t pt-2">
