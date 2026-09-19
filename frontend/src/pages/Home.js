@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import FAQSection from '../components/FAQSection';
+import PestMotion from '../components/PestMotion';
 
 const testimonials = [
   {
@@ -27,26 +28,78 @@ const Home = ({ onBookClick }) => (
       <title>Pest Control Chennai | Rodent, Termite, Cockroach | Book Now</title>
       <meta name="description" content="Best pest control services in Chennai for Rodent, Termite, Cockroach. Book online for home & commercial pest control." />
       <meta name="keywords" content="pest control chennai, rodent control, termite control, cockroach control, home pest control" />
+
+      {/* Open Graph Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="WildGreen Pest Management" />
+      <meta property="og:url" content="https://vishwa-pestcontrol.vercel.app/" />
+      <meta property="og:title" content="Pest Control Chennai | Rodent, Termite, Cockroach | Book Now" />
+      <meta property="og:description" content="Best pest control services in Chennai. Expert rodent, termite & cockroach control. Same day service available." />
+      <meta property="og:image" content="https://vishwa-pestcontrol.vercel.app/logo.png" />
+
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://vishwa-pestcontrol.vercel.app/" />
+      <meta name="twitter:title" content="Pest Control Chennai | Rodent, Termite, Cockroach" />
+      <meta name="twitter:description" content="Professional pest control in Chennai - rodent, termite & cockroach elimination. Book now!" />
+      <meta name="twitter:image" content="https://vishwa-pestcontrol.vercel.app/logo.png" />
+
+      {/* Local Business Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "WildGreen Pest Management",
+          "image": "https://vishwa-pestcontrol.vercel.app/logo.png",
+          "description": "Professional pest control services in Chennai. Expert termite control, cockroach treatment, rodent control, mosquito control and residential pest management.",
+          "telephone": "+91-8939-320-492",
+          "email": "visvishwa6903@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "41, Jayalakshmi Nagar, 4th Street, Vanagaram",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "600095",
+            "addressCountry": "IN"
+          },
+          "url": "https://vishwa-pestcontrol.vercel.app",
+          "priceRange": "₹799 - ₹5000",
+          "areaServed": {
+            "@type": "City",
+            "name": "Chennai"
+          },
+          "serviceType": ["Rodent Control", "Termite Control", "Cockroach Control", "Mosquito Control", "Residential Pest Control", "Commercial Pest Control"],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "22:00"
+          },
+        })}
+      </script>
+
     </Helmet>
-    <section className="mb-8">
-      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-        <div className="w-full md:w-1/2">
-          <img src="/hero.svg" alt="Pest Control Chennai" className="w-full h-40 sm:h-48 object-cover rounded-lg" />
+    <section className="relative mb-8 overflow-hidden rounded-2xl bg-green-950 p-5 shadow-xl sm:p-8">
+      <div className="relative z-10 flex flex-col items-center gap-6 md:flex-row md:gap-8">
+        <div className="relative w-full overflow-hidden rounded-xl md:w-1/2">
+          <img src="/chennai-pest-control-technician.webp" alt="Pest control technician providing professional treatment in Chennai" width="1400" height="933" loading="eager" decoding="async" className="aspect-video w-full rounded-xl object-cover object-left" />
+          <PestMotion />
+          <div className="absolute bottom-3 left-3 rounded-lg bg-black/60 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm">Professional pest treatment for Chennai homes and businesses</div>
         </div>
-        <div className="w-full md:w-1/2 text-center md:text-left px-2 md:px-0">
+        <div className="w-full text-center md:w-1/2 md:text-left px-2 md:px-0">
           <div className="mb-3">
-            <span className="inline-block bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">4.7 stars rating | 500+ Homes Protected</span>
+            <span className="inline-block bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">Local Chennai pest control service</span>
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3">Chennai's Trusted Pest Control Experts</h1>
-          <p className="text-sm sm:text-base text-gray-700 mb-4 font-semibold">500+ Homes Protected | Eco Safe Treatment | Same Day Visit</p>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">Chennai's Trusted Pest Control Experts</h1>
+          <p className="text-sm sm:text-base text-green-50 mb-4 font-semibold">Rodent, termite and cockroach control for homes, apartments, offices and shops.</p>
           <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-            <span className="text-xs bg-green-50 text-green-800 px-2 py-1 rounded">Safe for children & pets</span>
-            <span className="text-xs bg-blue-50 text-blue-800 px-2 py-1 rounded">Serving Chennai</span>
-            <span className="text-xs bg-orange-50 text-orange-800 px-2 py-1 rounded">Same day service</span>
+            <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Family-conscious treatment</span>
+            <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Serving Chennai</span>
+            <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Quick appointments</span>
           </div>
           <div className="flex gap-3 justify-center md:justify-start">
-            <Link to="/book" className="inline-block bg-primary text-white px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-green-700 font-medium text-sm sm:text-base">Book Now</Link>
-            <button onClick={onBookClick} className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base border-2 border-primary">Free Inspection</button>
+            <Link to="/book" className="inline-block bg-yellow-300 text-green-950 px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-200 font-bold text-sm sm:text-base">Book a service</Link>
+            <button onClick={onBookClick} className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base">Free inspection</button>
           </div>
         </div>
       </div>
@@ -75,7 +128,7 @@ const Home = ({ onBookClick }) => (
     <section className="mb-12">
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Real Results from Chennai Homes & Businesses</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">Over 500+ successful pest elimination projects across Chennai. See actual transformations from our certified technicians.</p>
+        <p className="text-gray-600 max-w-2xl mx-auto">See examples of practical pest-control work for Chennai homes, kitchens and commercial spaces.</p>
       </div>
       
       {/* Multiple Before/After Cases */}
@@ -86,13 +139,13 @@ const Home = ({ onBookClick }) => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/before-service.svg" alt="Before Rodent Control" className="w-full h-24 object-contain rounded" />
+                <img src="/rat.webp" alt="Before professional rodent control - rat droppings and damage in residential kitchen in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Rat droppings & damage</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
-                <img src="/after-service.svg" alt="After Rodent Control" className="w-full h-24 object-contain rounded" />
+                <img src="/rat-after.png" alt="After professional rodent control - clean kitchen free from rats and droppings in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-green-600">After: 100% rodent-free</span>
             </div>
@@ -108,13 +161,13 @@ const Home = ({ onBookClick }) => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/termite-before.svg" alt="Before Termite Control" className="w-full h-24 object-contain rounded" />
+                <img src="/termite-control-service-in-ahmedabad-500x500.webp" alt="Before termite control - wood damage and termite tunnels in commercial building in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Wood damage & tunnels</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
-                <img src="/termite-after.svg" alt="After Termite Control" className="w-full h-24 object-contain rounded" />
+                <img src="/clean-home-pest-protection.webp" alt="After termite treatment - clean protected interior in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-green-600">After: Fully protected structure</span>
             </div>
@@ -130,13 +183,13 @@ const Home = ({ onBookClick }) => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/cockroach-before.svg" alt="Before Cockroach Control" className="w-full h-24 object-contain rounded" />
+                <img src="/cockroaches-pest-control-services-1499757056-3120325-1000x1000.webp" alt="Before cockroach control - heavy cockroach infestation in restaurant kitchen in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Heavy infestation</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
-                <img src="/cockroach-after-new.svg" alt="After Cockroach Control" className="w-full h-24 object-contain rounded" />
+                <img src="/residential-pest-control-kitchen.webp" alt="After cockroach treatment - clean kitchen prepared for food-safe use in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-green-600">After: Food-safe environment</span>
             </div>
@@ -154,11 +207,11 @@ const Home = ({ onBookClick }) => (
           {/* Main Service Video */}
           <div className="bg-white rounded-lg p-4 shadow-md">
             <div className="bg-gray-200 rounded-lg h-48 md:h-56 flex items-center justify-center mb-4 relative overflow-hidden cursor-pointer group">
-              <img src="/service-video-thumbnail.svg" alt="Professional Pest Control Service" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+              <img src="/pest-control-technician-equipment.webp" alt="Professional pest control technician equipment in Chennai" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                 <button 
                   className="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center hover:bg-gray-100 transition-all transform hover:scale-110"
-                  onClick={() => window.open('https://youtube.com/watch?v=YOUR_VIDEO_ID', '_blank')}
+                  onClick={() => window.open('https://www.youtube.com/@WildGreenPestManagement', '_blank')}
                 >
                   <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -183,11 +236,11 @@ const Home = ({ onBookClick }) => (
           {/* Service Types Video Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=RODENT_VIDEO_ID', '_blank')}
               >
-                <img src="/rodent-control-video.svg" alt="Rodent Control" className="w-full h-full object-cover rounded" />
+                <img src="/chennai-pest-control-technician.webp" alt="Technician preparing rodent control service in Chennai" className="w-full h-full object-cover rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -204,11 +257,11 @@ const Home = ({ onBookClick }) => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=TERMITE_VIDEO_ID', '_blank')}
               >
-                <img src="/termite-treatment-video.svg" alt="Termite Treatment" className="w-full h-full object-cover rounded" />
+                <img src="/termite-damaged-wood.webp" alt="Woodwork inspected for termite treatment in Chennai" className="w-full h-full object-cover rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -225,11 +278,11 @@ const Home = ({ onBookClick }) => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=COCKROACH_VIDEO_ID', '_blank')}
               >
-                <img src="/cockroach-control-video.svg" alt="Cockroach Control" className="w-full h-full object-cover rounded" />
+                <img src="/residential-pest-control-kitchen.webp" alt="Kitchen area prepared for cockroach control in Chennai" className="w-full h-full object-cover rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -246,11 +299,11 @@ const Home = ({ onBookClick }) => (
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow cursor-pointer hover:shadow-md transition-shadow">
-              <div 
+              <div
                 className="bg-gray-200 rounded h-20 flex items-center justify-center mb-2 relative cursor-pointer"
                 onClick={() => window.open('https://youtube.com/watch?v=SAFETY_VIDEO_ID', '_blank')}
               >
-                <img src="/safety-methods-video.svg" alt="Safety Methods" className="w-full h-full object-cover rounded" />
+                <img src="/clean-home-pest-protection.webp" alt="Clean home interior after pest prevention service in Chennai" className="w-full h-full object-cover rounded" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -283,7 +336,7 @@ const Home = ({ onBookClick }) => (
       {/* Detailed Process Steps */}
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
         <h3 className="text-2xl font-semibold text-primary mb-6 text-center">Our Professional 6-Step Process</h3>
-        
+
         {/* Mobile Version - Compact */}
         <div className="block md:hidden">
           <div className="grid grid-cols-2 gap-4">
@@ -319,7 +372,7 @@ const Home = ({ onBookClick }) => (
             </div>
           </div>
         </div>
-        
+
         {/* Desktop Version - Detailed */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col items-center text-center">
@@ -355,22 +408,22 @@ const Home = ({ onBookClick }) => (
         </div>
       </div>
     </section>
-    
+
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/rodent.svg" alt="Rodent Control" className="h-20 w-20 object-contain mb-3" />
-        <h2 className="font-semibold text-primary text-lg mb-2">Rodent Control</h2>
-        <p className="text-sm text-gray-600 leading-relaxed">Safe, eco-friendly rodent removal for kitchens, gardens, and offices.</p>
+        <img src="/brown-rat-control.jpg" alt="Brown rat requiring professional rodent control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <h2 className="font-semibold text-primary text-lg mb-2">Rodent Control Chennai</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Best professional rodent control in Chennai. Safe, eco-friendly rodent removal for kitchens, gardens, and offices.</p>
       </div>
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/termite.svg" alt="Termite Control" className="h-20 w-20 object-contain mb-3" />
-        <h2 className="font-semibold text-primary text-lg mb-2">Termite Control</h2>
-        <p className="text-sm text-gray-600 leading-relaxed"> Odor & Odorless, child-safe long-lasting termite treatment for wood, furniture, and buildings.</p>
+        <img src="/termite-worker-control.jpg" alt="Termite worker associated with professional termite treatment in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <h2 className="font-semibold text-primary text-lg mb-2">Termite Control Chennai</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Expert Termite Control in Chennai. Odor & Odorless, child-safe long-lasting termite treatment for wood, furniture, and buildings.</p>
       </div>
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/cockroach.svg" alt="Cockroach Control" className="h-20 w-20 object-contain mb-3" />
-        <h2 className="font-semibold text-primary text-lg mb-2">Cockroach Control</h2>
-        <p className="text-sm text-gray-600 leading-relaxed">Odorless, child-safe cockroach control for homes and restaurants.</p>
+        <img src="/cockroach-control.jpg" alt="Cockroach requiring professional cockroach control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <h2 className="font-semibold text-primary text-lg mb-2">Cockroach Control Chennai</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Professional Cockroach Control in Chennai. Odorless, child-safe cockroach elimination for homes and restaurants.</p>
       </div>
     </section>
 

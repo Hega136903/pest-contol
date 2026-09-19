@@ -1,6 +1,6 @@
-# Chennai Pest Control - Images & Logos
+﻿# WildGreen Pest Management - Images & Logos
 
-## 📁 Image Assets
+## ðŸ“ Image Assets
 
 ### **Logo & Branding**
 - `logo.svg` - Company logo with shield and pest control theme (32x32px)
@@ -17,7 +17,7 @@
 - `termite.svg` - Termite control with wood damage effect (200x200px)  
 - `cockroach.svg` - Cockroach control illustration (200x200px)
 
-## 🎨 Design Features
+## ðŸŽ¨ Design Features
 
 ### **Color Scheme**
 - Primary Green: `#16a34a` (pest control theme)
@@ -31,7 +31,7 @@
 - Professional, clean SVG graphics
 - Scalable vector format for crisp display at any size
 
-## 🔄 Image Usage
+## ðŸ”„ Image Usage
 
 ### **In Components:**
 - Logo: Used in `Navbar.js`
@@ -45,7 +45,7 @@
 - Professional appearance builds trust
 - Visual representation of services
 
-## 📝 Customization Notes
+## ðŸ“ Customization Notes
 
 To replace with your own images:
 1. Keep the same filenames for automatic integration
@@ -54,7 +54,7 @@ To replace with your own images:
 4. Ensure images reflect your brand colors
 5. Include proper alt text descriptions
 
-## 🎯 Image Specifications
+## ðŸŽ¯ Image Specifications
 
 | Image | Dimensions | Format | Usage |
 |-------|------------|--------|-------|
@@ -66,3 +66,4 @@ To replace with your own images:
 | cockroach.svg | 200x200px | SVG | Service card |
 
 All images are responsive and will scale appropriately for mobile devices.
+

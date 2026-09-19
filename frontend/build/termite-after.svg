@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#f0fdf4"/>
+  
+  <!-- Treated wooden structure -->
+  <rect x="20" y="40" width="160" height="80" fill="#a0522d" stroke="#16a34a" stroke-width="2"/>
+  
+  <!-- Protective coating/sealant -->
+  <rect x="18" y="38" width="164" height="84" fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="5,3" opacity="0.6"/>
+  
+  <!-- Sealed entry points -->
+  <circle cx="45" cy="70" r="4" fill="#16a34a" opacity="0.8"/>
+  <circle cx="90" cy="80" r="5" fill="#16a34a" opacity="0.8"/>
+  <circle cx="140" cy="75" r="3" fill="#16a34a" opacity="0.8"/>
+  <circle cx="160" cy="85" r="4" fill="#16a34a" opacity="0.8"/>
+  
+  <!-- Treatment barrier indicators -->
+  <rect x="15" y="125" width="170" height="5" fill="#16a34a" opacity="0.7"/>
+  <text x="100" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#16a34a">CHEMICAL BARRIER</text>
+  
+  <!-- Protective checkmarks -->
+  <circle cx="40" cy="25" r="12" fill="#16a34a" opacity="0.9"/>
+  <path d="M35 25 L38 28 L45 21" stroke="white" stroke-width="2" fill="none"/>
+  
+  <circle cx="160" cy="30" r="12" fill="#16a34a" opacity="0.9"/>
+  <path d="M155 30 L158 33 L165 26" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Wood preservation indicators -->
+  <g fill="#fbbf24" opacity="0.8">
+    <path d="M60 50 L61 52 L63 51 L61 54 L60 56 L59 54 L57 51 L59 52 Z"/>
+    <path d="M120 60 L121 62 L123 61 L121 64 L120 66 L119 64 L117 61 L119 62 Z"/>
+    <path d="M90 45 L91 47 L93 46 L91 49 L90 51 L89 49 L87 46 L89 47 Z"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">TERMITE-PROTECTED</text>
+</svg>

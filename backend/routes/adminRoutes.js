@@ -1,36 +1,158 @@
 const express = require('express');
-const router = express.Router();
 const jwt = require('jsonwebtoken');
-const Booking = require('../models/Booking');
 
-// Simple hardcoded admin for demo
-const ADMIN = { username: 'admin', password: 'pestchennai2025' };
-const JWT_SECRET = process.env.JWT_SECRET || 'changeme';
+const bookingController = require('../controllers/bookingController');
+
+const router = express.Router();
+
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET;
+
+// ==========================================
+// ADMIN LOGIN
+// POST /api/admin/login
+// ==========================================
 
 router.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  if (username === ADMIN.username && password === ADMIN.password) {
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1d' });
-    return res.json({ token });
+  try {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      return res.status(400).json({
+        success: false,
+        error: 'Username and password are required',
+      });
+    }
+
+    if (!ADMIN_USERNAME || !ADMIN_PASSWORD || !JWT_SECRET) {
+      return res.status(500).json({
+        success: false,
+        error: 'Server authentication is not configured',
+      });
+    }
+
+    if (
+      username !== ADMIN_USERNAME ||
+      password !== ADMIN_PASSWORD
+    ) {
+      return res.status(401).json({
+        success: false,
+        error: 'Invalid credentials',
+      });
+    }
+
+    const token = jwt.sign(
+      {
+        username: ADMIN_USERNAME,
+        role: 'admin',
+      },
+      JWT_SECRET,
+      {
+        expiresIn: '1d',
+      }
+    );
+
+    return res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      token,
+    });
+  } catch (error) {
+    console.error('Admin login error:', error);
+
+    return res.status(500).json({
+      success: false,
+      error: 'Internal server error',
+    });
   }
-  res.status(401).json({ error: 'Invalid credentials' });
 });
 
-// Auth middleware
+// ==========================================
+// AUTHENTICATION MIDDLEWARE
+// ==========================================
+
 function auth(req, res, next) {
-  const token = req.headers.authorization?.split(' ')[1];
-  if (!token) return res.status(401).json({ error: 'No token' });
   try {
-    jwt.verify(token, JWT_SECRET);
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+      return res.status(401).json({
+        success: false,
+        error: 'Authentication required',
+      });
+    }
+
+    if (!authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({
+        success: false,
+        error: 'Invalid authorization format',
+      });
+    }
+
+    const token = authHeader.substring(7).trim();
+
+    if (!token) {
+      return res.status(401).json({
+        success: false,
+        error: 'Authentication token missing',
+      });
+    }
+
+    if (!JWT_SECRET) {
+      return res.status(500).json({
+        success: false,
+        error: 'Server authentication is not configured',
+      });
+    }
+
+    const decoded = jwt.verify(token, JWT_SECRET);
+
+    if (!decoded || decoded.role !== 'admin') {
+      return res.status(403).json({
+        success: false,
+        error: 'Admin access required',
+      });
+    }
+
+    req.admin = decoded;
+
     next();
-  } catch {
-    res.status(401).json({ error: 'Invalid token' });
+  } catch (error) {
+    console.error('Authentication error:', error.message);
+
+    return res.status(401).json({
+      success: false,
+      error: 'Invalid or expired token',
+    });
   }
 }
 
-router.get('/bookings', auth, async (req, res) => {
-  const bookings = await Booking.find().sort({ createdAt: -1 });
-  res.json(bookings);
+// ==========================================
+// GET ALL BOOKINGS
+// GET /api/admin/bookings
+// ==========================================
+
+router.get(
+  '/bookings',
+  auth,
+  bookingController.getBookings
+);
+
+// ==========================================
+// VERIFY ADMIN TOKEN
+// GET /api/admin/me
+// ==========================================
+
+router.get('/me', auth, (req, res) => {
+  return res.status(200).json({
+    success: true,
+    admin: {
+      username: req.admin.username,
+      role: req.admin.role,
+    },
+  });
 });
 
 module.exports = router;
+module.exports.auth = auth;

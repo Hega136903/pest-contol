@@ -1,15 +1,15 @@
-import React from 'react';
+﻿import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const About = () => (
   <div className="px-4 py-8 max-w-2xl mx-auto">
     <Helmet>
-      <title>About Us | Chennai Pest Control</title>
-      <meta name="description" content="About Chennai Pest Control. Trusted pest control experts for rodent, termite, cockroach in Chennai." />
+      <title>About Us | WildGreen Pest Management</title>
+      <meta name="description" content="About WildGreen Pest Management. Trusted pest control experts for rodent, termite, cockroach in Chennai." />
     </Helmet>
     <h1 className="text-2xl font-bold text-primary mb-4">About Us</h1>
     <p className="text-gray-700 mb-4">
-      Chennai Pest Control is a local startup dedicated to providing safe, effective, and affordable pest control services for homes and businesses in Chennai. Our team specializes in Rodent, Termite, and Cockroach control using eco-friendly methods and modern technology. We pride ourselves on fast response, professional service, and customer satisfaction.
+      WildGreen Pest Management is a local startup dedicated to providing safe, effective, and affordable pest control services for homes and businesses in Chennai. Our team specializes in Rodent, Termite, and Cockroach control using eco-friendly methods and modern technology. We pride ourselves on fast response, professional service, and customer satisfaction.
     </p>
     <ul className="list-disc ml-6 text-gray-600">
       <li>Certified pest control experts</li>
@@ -22,3 +22,4 @@ const About = () => (
 );
 
 export default About;
+

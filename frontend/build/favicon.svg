@@ -1,0 +1,9 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple shield shape -->
+  <path d="M8 1L13 3V7C13 10.25 10.75 13.25 8 15C5.25 13.25 3 10.25 3 7V3L8 1Z" fill="#16a34a"/>
+  <!-- Simple pest icon -->
+  <circle cx="8" cy="7" r="2" fill="#ffffff"/>
+  <!-- X mark -->
+  <line x1="6" y1="6" x2="10" y2="10" stroke="#ff0000" stroke-width="1"/>
+  <line x1="10" y1="6" x2="6" y2="10" stroke="#ff0000" stroke-width="1"/>
+</svg>

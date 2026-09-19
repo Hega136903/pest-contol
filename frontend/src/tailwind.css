@@ -1,3 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pest-motion {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.pest-motion + div {
+	position: relative;
+	z-index: 1;
+}
+
+.pest {
+	position: absolute;
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.35rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.9);
+	opacity: 0.7;
+	object-fit: contain;
+	filter: saturate(0.8) drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+	will-change: transform;
+}
+
+.pest-termite {
+	left: -2rem;
+	bottom: 0.85rem;
+	animation: pest-crawl 13s linear infinite;
+}
+
+.pest-roach {
+	right: -2rem;
+	top: 1.25rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	animation: pest-scurry 11s ease-in-out infinite;
+}
+
+.pest-ant {
+	left: 42%;
+	bottom: -2rem;
+	width: 2rem;
+	height: 2rem;
+	animation: pest-climb 9s ease-in-out infinite;
+	animation-delay: 2s;
+}
+
+.pest-fly {
+	left: 18%;
+	top: -2rem;
+	font-size: 1.1rem;
+	animation: pest-fly 8s ease-in-out infinite;
+	animation-delay: 1s;
+}
+
+.pest-beetle {
+	right: 18%;
+	bottom: -2rem;
+	font-size: 1.15rem;
+	animation: pest-rise 10s ease-in-out infinite;
+	animation-delay: 4s;
+}
+
+.pest-small-ant {
+	left: 68%;
+	bottom: 1.75rem;
+	font-size: 0.8rem;
+	animation: pest-tiny-crawl 7s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes pest-crawl {
+	0% { transform: translateX(0) translateY(0) rotate(8deg); }
+	45% { transform: translateX(45vw) translateY(-0.35rem) rotate(-4deg); }
+	100% { transform: translateX(105vw) translateY(0) rotate(8deg); }
+}
+
+@keyframes pest-scurry {
+	0%, 100% { transform: translateX(0) rotate(12deg); }
+	50% { transform: translateX(-45vw) translateY(0.5rem) rotate(-12deg); }
+}
+
+@keyframes pest-climb {
+	0%, 100% { transform: translateY(0) rotate(90deg); }
+	50% { transform: translateY(-13rem) translateX(1rem) rotate(70deg); }
+}
+
+@keyframes pest-fly {
+	0% { transform: translate(0, 0) rotate(0); }
+	35% { transform: translate(10vw, 4rem) rotate(18deg); }
+	70% { transform: translate(-6vw, 8rem) rotate(-12deg); }
+	100% { transform: translate(14vw, 13rem) rotate(8deg); }
+}
+
+@keyframes pest-rise {
+	0%, 100% { transform: translateY(0) rotate(-10deg); }
+	50% { transform: translateY(-9rem) translateX(-2rem) rotate(14deg); }
+}
+
+@keyframes pest-tiny-crawl {
+	0% { transform: translateX(0) rotate(0); }
+	100% { transform: translateX(-20vw) rotate(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.pest {
+		animation: none;
+	}
+}

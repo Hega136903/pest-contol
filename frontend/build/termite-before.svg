@@ -1,0 +1,43 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#fef2f2"/>
+  
+  <!-- Wooden structure with termite damage -->
+  <rect x="20" y="40" width="160" height="80" fill="#8b5a2b" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Termite tunnels/mud tubes -->
+  <path d="M30 45 Q35 50 40 45 Q45 50 50 45" stroke="#4a2c17" stroke-width="3" fill="none"/>
+  <path d="M60 55 Q65 60 70 55 Q75 60 80 55" stroke="#4a2c17" stroke-width="3" fill="none"/>
+  <path d="M120 65 Q125 70 130 65 Q135 70 140 65" stroke="#4a2c17" stroke-width="3" fill="none"/>
+  
+  <!-- Wood damage holes -->
+  <circle cx="45" cy="70" r="4" fill="#2d1810"/>
+  <circle cx="90" cy="80" r="5" fill="#2d1810"/>
+  <circle cx="140" cy="75" r="3" fill="#2d1810"/>
+  <circle cx="160" cy="85" r="4" fill="#2d1810"/>
+  
+  <!-- Termite swarmers -->
+  <ellipse cx="55" cy="90" rx="3" ry="2" fill="#4a2c17"/>
+  <ellipse cx="110" cy="95" rx="3" ry="2" fill="#4a2c17"/>
+  <ellipse cx="75" cy="85" rx="2" ry="1" fill="#4a2c17"/>
+  
+  <!-- Frass (termite droppings) -->
+  <circle cx="65" cy="110" r="1" fill="#8b4513"/>
+  <circle cx="67" cy="112" r="0.8" fill="#8b4513"/>
+  <circle cx="100" cy="115" r="1" fill="#8b4513"/>
+  <circle cx="135" cy="110" r="0.8" fill="#8b4513"/>
+  
+  <!-- Cracked/weakened wood -->
+  <path d="M80 40 L85 120" stroke="#654321" stroke-width="2" opacity="0.7"/>
+  <path d="M120 45 L125 115" stroke="#654321" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Warning indicators -->
+  <circle cx="40" cy="25" r="12" fill="#dc2626" opacity="0.9"/>
+  <text x="40" y="30" text-anchor="middle" fill="white" font-size="10" font-weight="bold">!</text>
+  
+  <circle cx="160" cy="30" r="12" fill="#dc2626" opacity="0.9"/>
+  <text x="160" y="35" text-anchor="middle" fill="white" font-size="10" font-weight="bold">!</text>
+  
+  <!-- Title -->
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">TERMITE DAMAGE</text>
+</svg>

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 
+const API_URL = (
+  process.env.REACT_APP_API_URL ||
+  'http://localhost:5000'
+).replace(/\/$/, '');
+
 const QuickBookingModal = ({ isOpen, onClose }) => {
   const [form, setForm] = useState({ fullName: '', mobile: '', service: 'Cockroach Control' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const [serverStarting, setServerStarting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,10 +22,12 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
     setLoading(true);
     setError('');
     setSuccess('');
+    setServerStarting(false);
+    const startupTimer = setTimeout(() => setServerStarting(true), 2500);
 
     try {
       const today = new Date().toISOString().split('T')[0];
-      const response = await fetch('https://pest-contol.onrender.com/api/bookings', {
+      const response = await fetch(`${API_URL}/api/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -45,6 +53,8 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
     } catch (err) {
       setError('Connection error. Please try again or call us directly.');
     } finally {
+      clearTimeout(startupTimer);
+      setServerStarting(false);
       setLoading(false);
     }
   };
@@ -61,7 +71,7 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Your Name</label>
-            <input type="text" name="fullName" value={form.fullName} onChange={handleChange} placeholder="Enter your name" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" name="fullName" value={form.fullName} onChange={handleChange} placeholder="Enter your name" required minLength="2" maxLength="100" className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
             <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Phone Number</label>
@@ -76,11 +86,11 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
               <option>Cockroach Control</option>
               <option>Termite Control</option>
               <option>Rodent Control</option>
-              <option>Bed Bugs</option>
             </select>
           </div>
           {success && <div className="bg-green-50 border border-green-200 text-green-700 px-3 py-2 rounded text-sm">{success}</div>}
           {error && <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded text-sm">{error}</div>}
+          {serverStarting && <div className="bg-blue-50 border border-blue-200 text-blue-800 px-3 py-2 rounded text-sm" role="status">The server is starting. Please keep this booking window open.</div>}
           <button type="submit" disabled={loading} className="w-full bg-primary text-white py-3 rounded font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
             {loading ? 'Booking...' : 'Book Free Inspection'}
           </button>

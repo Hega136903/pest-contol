@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -32,6 +33,19 @@ const FAQSection = () => {
 
   return (
     <section className="bg-gray-50 rounded-lg p-6 sm:p-8 mb-8">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: { '@type': 'Answer', text: faq.a }
+            }))
+          })}
+        </script>
+      </Helmet>
       <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 text-center">
         Common Questions
       </h2>
