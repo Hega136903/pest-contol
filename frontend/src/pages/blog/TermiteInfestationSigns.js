@@ -8,7 +8,7 @@ const TermiteInfestationSigns = () => (
     <Helmet>
       <title>Signs of Termite Infestation Every Chennai Homeowner Should Know | Early Detection Guide</title>
       <meta name="description" content="Complete guide to identifying termite infestation signs in Chennai homes. Early detection prevents thousands in repair costs. Learn warning signs and professional treatment." />
-      <meta name="keywords" content="termite infestation signs, termite damage, termite control Chennai, detect termites" />
+     
       <meta property="og:title" content="Signs of Termite Infestation Every Chennai Homeowner Should Know" />
       <meta property="og:description" content="Early termite detection prevents thousands in repair costs. Learn what to look for and when to call professionals." />
     </Helmet>

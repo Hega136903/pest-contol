@@ -10,7 +10,7 @@ const WhatsAppWidget = () => (
       <span className="hidden sm:inline">Call Now</span>
     </a>
     <a
-      href="https://wa.me/918939320492"
+      href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-green-500 px-2.5 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-xl"

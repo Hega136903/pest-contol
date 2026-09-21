@@ -1,58 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import LocationPage from '../components/LocationPage';
 
-const Chromepet = ({ onBookClick }) => (
-  <div className="px-4 py-8 max-w-4xl mx-auto">
-    <Helmet>
-      <title>Pest Control in Chromepet Chennai | Rodent, Termite, Cockroach Control</title>
-      <meta name="description" content="Professional pest control services in Chromepet, Chennai. Expert rodent control, termite treatment, cockroach elimination. Same day service. Book now!" />
-      <meta name="keywords" content="pest control Chromepet, rodent control Chromepet, termite control Chromepet, cockroach control Chromepet, Chennai" />
-    </Helmet>
-
-    <section className="mb-8">
-      <h1 className="text-3xl font-bold text-primary mb-4">Pest Control in Chromepet, Chennai</h1>
-      <p className="text-gray-700 mb-4 text-lg">
-        Professional pest control services for Chromepet residents. Specializing in rodent control, termite treatment, and cockroach elimination using eco-friendly, family-safe methods.
-      </p>
-
-      <div className="bg-green-50 border-l-4 border-primary p-6 rounded mb-6">
-        <h2 className="text-xl font-bold text-primary mb-3">Why Choose Us for Pest Control in Chromepet?</h2>
-        <ul className="list-disc ml-6 space-y-2 text-gray-700">
-          <li>Quick response - Same day service in Chromepet</li>
-          <li>Certified pest control experts</li>
-          <li>Safe eco-friendly treatments</li>
-          <li>1-year warranty on all services</li>
-          <li>Transparent pricing</li>
-          <li>Local support for homes and businesses in Chromepet</li>
-        </ul>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold text-primary mb-3">Rodent Control Chromepet</h3>
-          <p className="text-gray-600 mb-4">Effective rodent removal for homes and offices in Chromepet. Complete rat and mouse control.</p>
-          <Link to="/book" className="text-primary font-semibold hover:underline">Book Now →</Link>
-        </div>
-
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold text-primary mb-3">Termite Control Chromepet</h3>
-          <p className="text-gray-600 mb-4">Expert termite treatment protecting your structures and furniture from damage.</p>
-          <Link to="/book" className="text-primary font-semibold hover:underline">Book Now →</Link>
-        </div>
-
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-xl font-bold text-primary mb-3">Cockroach Control Chromepet</h3>
-          <p className="text-gray-600 mb-4">Safe cockroach elimination for homes and commercial spaces in Chromepet.</p>
-          <Link to="/book" className="text-primary font-semibold hover:underline">Book Now →</Link>
-        </div>
-      </div>
-
-      <Link to="/book" className="block text-center bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-green-700 transition-colors">
-        Book Pest Control Service in Chromepet
-      </Link>
-    </section>
-  </div>
-);
+const Chromepet = (props) => <LocationPage {...props} area="Chromepet" slug="pest-control-chromepet" intro="Chromepet’s established homes, student accommodation and commercial streets need practical pest control for food areas, bathrooms, storage and shared access points." pests={['Cockroaches in kitchens, hostels and shops', 'Rats near drains, markets and waste areas', 'Termites affecting furniture, doors and older structures']} propertyTypes={['Homes, flats and paying guest accommodation', 'Shops, clinics and offices', 'Restaurants, hostels and schools']} coverage={['Chromepet Railway Station area', 'New Colony', 'Hasthinapuram', 'Nehrunagar']} process={['Check rooms, drains, storage and entry points.', 'Choose treatment based on the pest and property.', 'Treat active areas and likely harbourage points.', 'Explain prevention and follow-up requirements.']} preparation={['Store or cover food, utensils and personal items.', 'Clear access to kitchen, bathroom and cupboard edges.', 'Arrange access to shared corridors when needed.', 'Keep people and pets clear until re-entry is advised.']} faqs={[{ question: 'Do you provide pest control for hostels in Chromepet?', answer: 'Yes. We can plan treatment for rooms, shared kitchens and common areas with suitable access arrangements.' }, { question: 'Can recurring cockroach problems be inspected?', answer: 'Yes. We look at drains, food storage, cracks and moisture sources before recommending treatment.' }]} nearby={[{ name: 'Pallavaram', path: '/pest-control-pallavaram' }, { name: 'Tambaram', path: '/pest-control-tambaram' }, { name: 'Velachery', path: '/pest-control-velachery' }]} />;
 
 export default Chromepet;

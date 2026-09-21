@@ -8,7 +8,7 @@ const RodentControlGuide = () => (
     <Helmet>
       <title>Complete Rodent Control Guide for Chennai Homes | Rat & Mouse Elimination</title>
       <meta name="description" content="Expert rodent control guide for Chennai. Learn how to identify, prevent, and eliminate rats and mice. Professional treatment and DIY prevention tips." />
-      <meta name="keywords" content="rodent control Chennai, rat control, mouse control, rodent removal, how to get rid of rats" />
+     
       <meta property="og:title" content="Complete Rodent Control Guide for Chennai Homes" />
       <meta property="og:description" content="Comprehensive guide to rodent elimination and prevention in Chennai homes." />
     </Helmet>

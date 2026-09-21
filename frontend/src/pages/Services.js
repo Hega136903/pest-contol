@@ -50,7 +50,7 @@ const Services = () => (
     <Helmet>
       <title>Pest Control Services | Rodent, Termite, Cockroach | Chennai</title>
       <meta name="description" content="Professional pest control services in Chennai. Rodent control, termite treatment, cockroach elimination. Eco-friendly, safe for children & pets. Book now!" />
-      <meta name="keywords" content="pest control services, rodent control, termite treatment, cockroach control, Chennai" />
+
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
@@ -80,6 +80,7 @@ const Services = () => (
           <p className="text-sm text-gray-600 mb-2 leading-relaxed">{s.description}</p>
           <div className="text-xs text-gray-500 mb-1">Duration: {s.duration}</div>
           <div className="text-xs text-gray-500 mb-4 font-medium">Price: {s.price}</div>
+          <Link to={s.name === 'Rodent Control' ? '/services/rodent-control' : s.name === 'Termite Control' ? '/services/termite-control' : '/services/cockroach-control'} className="text-primary font-semibold text-sm w-full hover:underline">Learn about this service</Link>
           <Link to="/book" className="bg-primary text-white px-6 py-2 rounded hover:bg-green-700 font-medium text-sm w-full">Book Now</Link>
         </div>
       ))}

@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/services</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/services</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/book</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app//book</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/about</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/about</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/contact</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/contact</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/blog</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/blog</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -45,63 +45,63 @@
 
   <!-- Location Pages -->
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-porur</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-porur</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-velachery</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-velachery</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-anna-nagar</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-anna-nagar</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-tambaram</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-tambaram</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-avadi</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-avadi</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-ambattur</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-ambattur</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-omr</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-omr</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-pallavaram</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-pallavaram</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/pest-control-chromepet</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/pest-control-chromepet</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -109,28 +109,28 @@
 
   <!-- Blog Pages -->
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/blog/cockroach-control-chennai</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/blog/cockroach-control-chennai</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/blog/termite-infestation-signs</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/blog/termite-infestation-signs</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/blog/pest-control-cost-chennai</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/blog/pest-control-cost-chennai</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://vishwa-pestcontrol.vercel.app/blog/rodent-control-guide</loc>
+    <loc>https://wildgreenpestmanagement.vercel.app/blog/rodent-control-guide</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>

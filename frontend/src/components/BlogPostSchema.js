@@ -7,22 +7,24 @@ const BlogPostSchema = ({ headline, description, path, image = '/logo.png' }) =>
     '@type': 'Article',
     headline,
     description,
-    image: `https://vishwa-pestcontrol.vercel.app${image}`,
+    image: `https://wildgreenpestmanagement.vercel.app/${image}`,
     datePublished: '2026-01-01',
     dateModified: '2026-09-19',
     author: {
       '@type': 'Organization',
+      '@id': 'https://wildgreenpestmanagement.vercel.app/#organization',
       name: 'WildGreen Pest Management',
     },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://wildgreenpestmanagement.vercel.app/#organization',
       name: 'WildGreen Pest Management',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://vishwa-pestcontrol.vercel.app/logo.png',
+        url: 'https://wildgreenpestmanagement.vercel.app//logo.png',
       },
     },
-    mainEntityOfPage: `https://vishwa-pestcontrol.vercel.app${path}`,
+    mainEntityOfPage: `https://wildgreenpestmanagement.vercel.app/${path}`,
   };
 
   return (

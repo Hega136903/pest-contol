@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 // Main Pages
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import ServicePage from "./pages/ServicePage";
 import BookService from "./pages/BookService";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -46,6 +47,7 @@ import StickyCallBar from "./components/StickyCallBar";
 import QuickBookingModal from "./components/QuickBookingModal";
 import Breadcrumb from "./components/Breadcrumb";
 import SiteSEO from "./components/SiteSEO";
+import OrganizationSchema from "./components/OrganizationSchema";
 import LocalAreaContent from "./components/LocalAreaContent";
 
 import "./tailwind.css";
@@ -56,6 +58,7 @@ function App() {
   return (
     <Router>
       <SiteSEO />
+      <OrganizationSchema />
       <Helmet>
         <meta
           name="application-name"
@@ -107,6 +110,21 @@ function App() {
           <Route
             path="/services"
             element={<Services />}
+          />
+
+          <Route
+            path="/services/rodent-control"
+            element={<ServicePage type="rodent" />}
+          />
+
+          <Route
+            path="/services/termite-control"
+            element={<ServicePage type="termite" />}
+          />
+
+          <Route
+            path="/services/cockroach-control"
+            element={<ServicePage type="cockroach" />}
           />
 
           <Route

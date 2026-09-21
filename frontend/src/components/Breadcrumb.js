@@ -8,6 +8,9 @@ const Breadcrumb = () => {
   const breadcrumbMap = {
     '/': [{ label: 'Home', path: '/' }],
     '/services': [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }],
+    '/services/rodent-control': [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }, { label: 'Rodent Control', path: '/services/rodent-control' }],
+    '/services/termite-control': [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }, { label: 'Termite Control', path: '/services/termite-control' }],
+    '/services/cockroach-control': [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }, { label: 'Cockroach Control', path: '/services/cockroach-control' }],
     '/book': [{ label: 'Home', path: '/' }, { label: 'Book Service', path: '/book' }],
     '/contact': [{ label: 'Home', path: '/' }, { label: 'Contact', path: '/contact' }],
     '/about': [{ label: 'Home', path: '/' }, { label: 'About', path: '/about' }],
@@ -32,7 +35,7 @@ const Breadcrumb = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.label,
-      "item": `https://vishwa-pestcontrol.vercel.app${crumb.path}`
+      "item": `https://wildgreenpestmanagement.vercel.app/${crumb.path}`
     }))
   };
 

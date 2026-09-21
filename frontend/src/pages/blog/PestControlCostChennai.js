@@ -8,7 +8,7 @@ const PestControlCostChennai = () => (
     <Helmet>
       <title>Pest Control Cost in Chennai 2026 | Transparent Pricing Guide</title>
       <meta name="description" content="Complete guide to pest control pricing in Chennai. Understand costs for rodent, termite, and cockroach control. Get free quotes and comparison." />
-      <meta name="keywords" content="pest control cost Chennai, pest control price, affordable pest control, cockroach treatment cost" />
+     
       <meta property="og:title" content="Pest Control Cost in Chennai 2026 | Complete Pricing Guide" />
       <meta property="og:description" content="Transparent pricing for pest control in Chennai. Compare costs and find affordable solutions for your pest problems." />
     </Helmet>
@@ -148,7 +148,7 @@ const PestControlCostChennai = () => (
             <span className="text-red-500 text-xl">❌</span>
             <div>
               <p className="font-semibold text-gray-800">Extra charges after treatment</p>
-              <p className="text-sm text-gray-600">Reputable providers like Vishwa Pest Control provide transparent pricing upfront—no surprise costs.</p>
+              <p className="text-sm text-gray-600">Reputable providers like WildGreen Pest Management provide transparent pricing upfront—no surprise costs.</p>
             </div>
           </div>
           <div className="flex gap-3 items-start">
@@ -284,7 +284,7 @@ const PestControlCostChennai = () => (
             <span className="text-green-500 font-bold">✓</span>
             <div>
               <p className="font-semibold text-gray-800">Professional service</p>
-              <p className="text-sm text-gray-600">Certified providers like Vishwa Pest Control offer expertise, warranties, and guaranteed results.</p>
+              <p className="text-sm text-gray-600">Certified providers like WildGreen Pest Management offer expertise, warranties, and guaranteed results.</p>
             </div>
           </div>
         </div>
@@ -295,7 +295,7 @@ const PestControlCostChennai = () => (
         <div className="space-y-4">
           <div className="bg-gray-50 p-4 rounded">
             <h3 className="font-semibold text-primary mb-2">Q: Do you charge for inspection?</h3>
-            <p className="text-gray-700">A: No! Vishwa Pest Control offers completely free inspections. We assess the infestation and provide a transparent quote before any treatment.</p>
+            <p className="text-gray-700">A: No! WildGreen Pest Management offers completely free inspections. We assess the infestation and provide a transparent quote before any treatment.</p>
           </div>
           <div className="bg-gray-50 p-4 rounded">
             <h3 className="font-semibold text-primary mb-2">Q: Are there any hidden charges?</h3>
@@ -315,7 +315,7 @@ const PestControlCostChennai = () => (
       <div className="bg-gradient-to-r from-primary to-green-600 text-white p-8 rounded-lg mb-8">
         <h2 className="text-2xl font-bold mb-4">Get Your Free Quote Today</h2>
         <p className="mb-6">
-          Stop guessing about pest control costs. Get a transparent, free quote from Vishwa Pest Control. We'll inspect your property, assess the infestation, and provide fair pricing with no hidden charges.
+          Stop guessing about pest control costs. Get a transparent, free quote from WildGreen Pest Management. We'll inspect your property, assess the infestation, and provide fair pricing with no hidden charges.
         </p>
         <div className="flex gap-4 flex-wrap">
           <Link to="/book" className="inline-block bg-white text-primary px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors">

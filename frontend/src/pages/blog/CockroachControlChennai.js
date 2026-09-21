@@ -8,7 +8,7 @@ const CockroachControlChennai = () => (
     <Helmet>
       <title>How to Get Rid of Cockroaches in Chennai Homes Permanently | Expert Guide</title>
       <meta name="description" content="Complete guide on permanent cockroach elimination in Chennai homes. Learn causes, health risks, professional treatment methods, and prevention tips." />
-      <meta name="keywords" content="cockroach control Chennai, how to get rid of cockroaches, cockroach treatment, eliminate cockroaches" />
+     
       <meta property="og:title" content="How to Get Rid of Cockroaches in Chennai Homes Permanently" />
       <meta property="og:description" content="Expert guide on cockroach elimination with professional treatment methods and prevention tips for Chennai." />
       <meta name="twitter:title" content="How to Get Rid of Cockroaches in Chennai Homes" />
@@ -142,7 +142,7 @@ const CockroachControlChennai = () => (
           </div>
           <div className="bg-gray-50 p-4 rounded">
             <h3 className="font-semibold text-primary mb-2">Q: What warranty do you provide?</h3>
-            <p className="text-gray-700">A: Vishwa Pest Control offers a 1-year warranty. If cockroaches return during this period, we provide free follow-up treatment.</p>
+            <p className="text-gray-700">A: WildGreen Pest Management offers a 1-year warranty. If cockroaches return during this period, we provide free follow-up treatment.</p>
           </div>
           <div className="bg-gray-50 p-4 rounded">
             <h3 className="font-semibold text-primary mb-2">Q: How much does professional cockroach control cost?</h3>
