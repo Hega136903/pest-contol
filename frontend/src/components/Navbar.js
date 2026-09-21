@@ -13,7 +13,7 @@ const Navbar = ({ onBookClick }) => {
   };
 
   return (
-    <nav className="bg-primary text-white px-4 py-3 shadow relative">
+    <nav className="bg-primary text-white px-4 py-3 shadow relative z-40">
       <div className="flex justify-between items-center">
         {/* Logo and brand name */}
         <div className="flex items-center gap-2">
