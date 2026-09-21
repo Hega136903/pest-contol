@@ -1,15 +1,13 @@
-﻿# Robots.txt for WildGreen Pest Management
-# Allow all search engines to crawl the site
+# Robots.txt for Wild Green Pest Management
 
 User-agent: *
 Allow: /
 
-# Disallow private/admin pages
+# Private/admin pages
 Disallow: /admin
 Disallow: /admin/
-# Point to sitemap
-Sitemap: https://wildgreenpestmanagement.vercel.app/sitemap.xml
 
-# Crawl delay (optional - prevent server overload)
+# XML Sitemap
+Sitemap: https://wildgreenpestmanagement.vercel.app/sitemap.xml
 
 
