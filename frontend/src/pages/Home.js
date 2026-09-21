@@ -128,7 +128,7 @@ const Home = ({ onBookClick }) => (
           <div className="space-y-4">
             <div className="text-center">
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
-                <img src="/termite-control-service-in-chennai.webp" alt="Before termite control - wood damage and termite tunnels in commercial building in Chennai" className="w-full h-24 object-cover rounded" />
+                <img src="/termite-damaged-wood.webp" alt="Before termite control - wood damage and termite tunnels in commercial building in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-red-600">Before: Wood damage & tunnels</span>
             </div>
