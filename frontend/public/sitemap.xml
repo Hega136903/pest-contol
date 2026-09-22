@@ -99,5 +99,25 @@
     <loc>https://www.wildgreenpest.in/blog/rodent-control-guide</loc>
     <lastmod>2026-09-20</lastmod>
   </url>
+<!-- Service Pages -->
+  <url>
+    <loc>https://www.wildgreenpest.in/services/rodent-control</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.wildgreenpest.in/services/termite-control</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.wildgreenpest.in/services/cockroach-control</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.wildgreenpest.in/book</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
 
 </urlset>
