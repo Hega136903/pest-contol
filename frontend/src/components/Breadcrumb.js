@@ -35,7 +35,7 @@ const Breadcrumb = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.label,
-      "item": `https://wildgreenpestmanagement.vercel.app/${crumb.path}`
+      "item": `https://www.wildgreenpest.in/${crumb.path}`
     }))
   };
 

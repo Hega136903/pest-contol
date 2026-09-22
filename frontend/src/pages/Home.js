@@ -33,17 +33,17 @@ const Home = ({ onBookClick }) => (
       {/* Open Graph Tags */}
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="WildGreen Pest Management" />
-      <meta property="og:url" content="https://wildgreenpestmanagement.vercel.app//" />
+      <meta property="og:url" content="https://www.wildgreenpest.in//" />
       <meta property="og:title" content="Pest Control Chennai | Rodent, Termite, Cockroach | Book Now" />
       <meta property="og:description" content="Best pest control services in Chennai. Expert rodent, termite & cockroach control. Same day service available." />
-      <meta property="og:image" content="https://wildgreenpestmanagement.vercel.app//logo.png" />
+      <meta property="og:image" content="https://www.wildgreenpest.in//logo.png" />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content="https://wildgreenpestmanagement.vercel.app//" />
+      <meta name="twitter:url" content="https://www.wildgreenpest.in//" />
       <meta name="twitter:title" content="Pest Control Chennai | Rodent, Termite, Cockroach" />
       <meta name="twitter:description" content="Professional pest control in Chennai - rodent, termite & cockroach elimination. Book now!" />
-      <meta name="twitter:image" content="https://wildgreenpestmanagement.vercel.app//logo.png" />
+      <meta name="twitter:image" content="https://www.wildgreenpest.in//logo.png" />
     </Helmet>
     <BusinessSchema />
     <section className="relative mb-8 overflow-hidden rounded-2xl bg-green-950 p-5 shadow-xl sm:p-8">

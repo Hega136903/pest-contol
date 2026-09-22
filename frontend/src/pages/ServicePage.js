@@ -18,7 +18,7 @@ const ServicePage = ({ type }) => {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: service.title,
-            provider: { '@type': 'PestControl', '@id': 'https://wildgreenpestmanagement.vercel.app/#business', name: 'WildGreen Pest Management' },
+            provider: { '@type': 'PestControl', '@id': 'https://www.wildgreenpest.in/#business', name: 'WildGreen Pest Management' },
             areaServed: { '@type': 'City', name: 'Chennai' },
             description: service.description,
             url: `https://wildgreenpestcontrol.com${service.path}`,

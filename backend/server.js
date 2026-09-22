@@ -24,7 +24,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://wildgreenpestmanagement.vercel.app',
+      'https://www.wildgreenpest.in',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],

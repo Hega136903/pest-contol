@@ -7,24 +7,24 @@ const BlogPostSchema = ({ headline, description, path, image = '/logo.png' }) =>
     '@type': 'Article',
     headline,
     description,
-    image: `https://wildgreenpestmanagement.vercel.app/${image}`,
+    image: `https://www.wildgreenpest.in/${image}`,
     datePublished: '2026-01-01',
     dateModified: '2026-09-19',
     author: {
       '@type': 'Organization',
-      '@id': 'https://wildgreenpestmanagement.vercel.app/#organization',
+      '@id': 'https://www.wildgreenpest.in/#organization',
       name: 'WildGreen Pest Management',
     },
     publisher: {
       '@type': 'Organization',
-      '@id': 'https://wildgreenpestmanagement.vercel.app/#organization',
+      '@id': 'https://www.wildgreenpest.in/#organization',
       name: 'WildGreen Pest Management',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wildgreenpestmanagement.vercel.app//logo.png',
+        url: 'https://www.wildgreenpest.in//logo.png',
       },
     },
-    mainEntityOfPage: `https://wildgreenpestmanagement.vercel.app/${path}`,
+    mainEntityOfPage: `https://www.wildgreenpest.in/${path}`,
   };
 
   return (

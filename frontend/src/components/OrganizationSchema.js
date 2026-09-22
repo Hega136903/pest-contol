@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SITE_URL = 'https://wildgreenpestmanagement.vercel.app/';
+const SITE_URL = 'https://www.wildgreenpest.in/';
 
 const OrganizationSchema = () => (
   <script type="application/ld+json">

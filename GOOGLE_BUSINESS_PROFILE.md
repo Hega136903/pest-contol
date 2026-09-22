@@ -29,7 +29,7 @@ WildGreen Pest Management provides practical pest control for homes, apartments,
 - Phone: +91 8939320492
 - Email: wildgreenpestcontrol@gmail.com
 - Address: 41, Jayalakshmi Nagar, 4th Street, Vanagaram, Chennai 600095
-- Website: https://wildgreenpestmanagement.vercel.app/
+- Website: https://www.wildgreenpest.in/
 
 ## Service Area
 
