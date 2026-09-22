@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://www.wildgreenpest.in/';
+const SITE_URL = 'https://www.wildgreenpest.in';
 
 const routeDescriptions = {
   '/': 'Trusted pest control in Chennai for termites, cockroaches and rodents. Get safe treatment, transparent pricing and fast service from WildGreen Pest Management.',
