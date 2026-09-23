@@ -357,12 +357,12 @@ const Home = ({ onBookClick }) => (
         <p className="text-sm text-gray-600 leading-relaxed">Best professional rodent control in Chennai. Safe, eco-friendly rodent removal for kitchens, gardens, and offices.</p>
       </div>
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/termite-worker-control.jpg" alt="Termite worker associated with professional termite treatment in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <img src="/termite-worker-control.webp" alt="Termite worker associated with professional termite treatment in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
         <h2 className="font-semibold text-primary text-lg mb-2">Termite Control Chennai</h2>
         <p className="text-sm text-gray-600 leading-relaxed">Expert Termite Control in Chennai. Odor & Odorless, child-safe long-lasting termite treatment for wood, furniture, and buildings.</p>
       </div>
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/cockroach-control.jpg" alt="Cockroach requiring professional cockroach control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <img src="/cockroach-control.webp" alt="Cockroach requiring professional cockroach control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
         <h2 className="font-semibold text-primary text-lg mb-2">Cockroach Control Chennai</h2>
         <p className="text-sm text-gray-600 leading-relaxed">Professional Cockroach Control in Chennai. Odorless, child-safe cockroach elimination for homes and restaurants.</p>
       </div>
