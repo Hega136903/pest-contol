@@ -297,7 +297,7 @@ const AdminPanel = () => {
               Pending
             </p>
 
-            <p className="text-3xl font-bold text-yellow-600 mt-2">
+            <p className="text-3xl font-bold text-yellow-700 mt-2">
               {statistics.pending}
             </p>
           </div>
