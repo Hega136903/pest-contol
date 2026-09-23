@@ -10,7 +10,7 @@ const BusinessSchema = () => (
       '@id': `${SITE_URL}#business`,
       name: 'WildGreen Pest Management',
       url: SITE_URL,
-      image: `${SITE_URL}logo.png`,
+      image: `${SITE_URL}logo.webp`,
       description: 'Professional pest control services in Chennai for homes, offices and commercial properties.',
       telephone: '+918939320492',
       email: 'wildgreenpestcontrol@gmail.com',

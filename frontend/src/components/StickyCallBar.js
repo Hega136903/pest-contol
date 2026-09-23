@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StickyCallBar = () => (
-  <div className="sticky top-0 z-50 bg-green-600 text-white shadow-lg">
+  <div className="sticky top-0 z-50 bg-green-700 text-white shadow-lg">
     {/* Mobile UI */}
     <div className="sm:hidden px-3 py-2">
       <div className="flex items-center justify-between gap-2">

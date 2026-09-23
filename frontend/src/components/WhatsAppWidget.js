@@ -13,7 +13,7 @@ const WhatsAppWidget = () => (
       href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-green-500 px-2.5 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-xl"
+      className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-green-700 px-2.5 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-xl"
     >
       <span className="flex h-9 sm:h-10 w-9 sm:w-10 items-center justify-center rounded-full bg-white text-green-600 flex-shrink-0">
         <img

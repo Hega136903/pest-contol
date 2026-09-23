@@ -10,7 +10,7 @@ const OrganizationSchema = () => (
       '@id': `${SITE_URL}#organization`,
       name: 'WildGreen Pest Management',
       url: SITE_URL,
-      logo: `${SITE_URL}logo.png`,
+      logo: `${SITE_URL}logo.webp`,
       telephone: '+918939320492',
       email: 'wildgreenpestcontrol@gmail.com',
       sameAs: ['https://www.youtube.com/@WildGreenPestManagement'],

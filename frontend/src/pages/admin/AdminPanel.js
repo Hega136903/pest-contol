@@ -223,7 +223,7 @@ const AdminPanel = () => {
             onClick={() =>
               (window.location.href = "/admin/login")
             }
-            className="bg-green-600 text-white px-5 py-2 rounded-lg"
+            className="bg-green-700 text-white px-5 py-2 rounded-lg"
           >
             Go to Login
           </button>
@@ -457,7 +457,7 @@ const AdminPanel = () => {
                                   booking._id
                                 )
                               }
-                              className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm"
+                              className="bg-green-700 text-white px-3 py-2 rounded-lg text-sm"
                             >
                               Complete
                             </button>
@@ -546,7 +546,7 @@ const AdminPanel = () => {
                         onClick={() =>
                           markCompleted(booking._id)
                         }
-                        className="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg"
+                        className="flex-1 bg-green-700 text-white px-3 py-2 rounded-lg"
                       >
                         Complete
                       </button>

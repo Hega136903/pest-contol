@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const BlogPostSchema = ({ headline, description, path, image = '/logo.png' }) => {
+const BlogPostSchema = ({ headline, description, path, image = '/logo.webp' }) => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -21,7 +21,7 @@ const BlogPostSchema = ({ headline, description, path, image = '/logo.png' }) =>
       name: 'WildGreen Pest Management',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.wildgreenpest.in//logo.png',
+        url: 'https://www.wildgreenpest.in//logo.webp',
       },
     },
     mainEntityOfPage: `https://www.wildgreenpest.in/${path}`,
