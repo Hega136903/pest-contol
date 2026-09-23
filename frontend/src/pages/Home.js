@@ -79,7 +79,7 @@ const Home = ({ onBookClick }) => (
         {testimonials.map((t, i) => (
           <div key={i} className="bg-white rounded-lg shadow p-4 border-l-4 border-primary">
             <div className="flex items-center mb-2">
-              <span className="text-yellow-400 text-sm">5 stars</span>
+              <span className="text-yellow-600 text-sm">5 stars</span>
             </div>
             <p className="text-sm text-gray-700 mb-3 italic">"{t.text}"</p>
             <div className="border-t pt-2">
@@ -108,13 +108,13 @@ const Home = ({ onBookClick }) => (
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
                 <img src="/rat.webp" alt="Before professional rodent control - rat droppings and damage in residential kitchen in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-red-600">Before: Rat droppings & damage</span>
+              <span className="text-xs font-medium text-red-700">Before: Rat droppings & damage</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
                 <img src="/rat-after.webp" alt="After professional rodent control - clean kitchen free from rats and droppings in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-green-600">After: Rodent treatment and prevention guidance</span>
+              <span className="text-xs font-medium text-green-700">After: Rodent treatment and prevention guidance</span>
             </div>
           </div>
           <div className="mt-3 text-center">
@@ -130,13 +130,13 @@ const Home = ({ onBookClick }) => (
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
                 <img src="/termite-damaged-wood.webp" alt="Before termite control - wood damage and termite tunnels in commercial building in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-red-600">Before: Wood damage & tunnels</span>
+              <span className="text-xs font-medium text-red-700">Before: Wood damage & tunnels</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
                 <img src="/clean-home-pest-protection.webp" alt="After termite treatment - clean protected interior in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-green-600">After: Fully protected structure</span>
+              <span className="text-xs font-medium text-green-700">After: Fully protected structure</span>
             </div>
           </div>
           <div className="mt-3 text-center">
@@ -152,13 +152,13 @@ const Home = ({ onBookClick }) => (
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2">
                 <img src="/cockroaches-pest-control-services-1499757056-3120325-1000x1000.webp" alt="Before cockroach control - heavy cockroach infestation in restaurant kitchen in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-red-600">Before: Heavy infestation</span>
+              <span className="text-xs font-medium text-red-700">Before: Heavy infestation</span>
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
                 <img src="/residential-pest-control-kitchen.webp" alt="After cockroach treatment - clean kitchen prepared for food-safe use in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
-              <span className="text-xs font-medium text-green-600">After: Food-safe environment</span>
+              <span className="text-xs font-medium text-green-700">After: Food-safe environment</span>
             </div>
           </div>
           <div className="mt-3 text-center">
@@ -188,7 +188,7 @@ const Home = ({ onBookClick }) => (
             <p className="text-sm text-gray-600 mb-3">Watch our team safely eliminate pest infestations in Chennai properties</p>
             <div className="flex items-center justify-between mt-3">
               <span className="text-xs text-gray-500">Duration: 4:30</span>
-              <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Live Service</span>
+              <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded">Live Service</span>
             </div>
             <Link 
               to="/services" 

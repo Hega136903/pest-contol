@@ -76,8 +76,8 @@ const BookService = () => {
         <input type="time" name="preferredTime" value={form.preferredTime} onChange={handleChange} required className="border p-2 rounded" />
         <button type="submit" className="bg-primary text-white px-4 py-2 rounded hover:bg-green-700">Submit</button>
         {serverStarting && <div className="text-blue-700 bg-blue-50 border border-blue-200 rounded px-3 py-2 text-sm" role="status">The server is starting. Your booking is being sent; please keep this page open.</div>}
-        {success && <div className="text-green-600 mt-2">{success}</div>}
-        {error && <div className="text-red-600 mt-2">{error}</div>}
+        {success && <div className="text-green-700 mt-2">{success}</div>}
+        {error && <div className="text-red-700 mt-2">{error}</div>}
       </form>
     </div>
   );

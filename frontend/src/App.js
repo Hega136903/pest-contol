@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -59,6 +58,7 @@ function App() {
     <Router>
       <SiteSEO />
       <OrganizationSchema />
+
       <Helmet>
         <meta
           name="application-name"
@@ -91,214 +91,224 @@ function App() {
         <Breadcrumb />
 
         {/* ==========================================
-            Routes
+            Main Content
         ========================================== */}
 
-        <Routes>
-
-          {/* Main Pages */}
-
-          <Route
-            path="/"
-            element={
-              <Home
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/services"
-            element={<Services />}
-          />
-
-          <Route
-            path="/services/rodent-control"
-            element={<ServicePage type="rodent" />}
-          />
-
-          <Route
-            path="/services/termite-control"
-            element={<ServicePage type="termite" />}
-          />
-
-          <Route
-            path="/services/cockroach-control"
-            element={<ServicePage type="cockroach" />}
-          />
-
-          <Route
-            path="/book"
-            element={<BookService />}
-          />
-
-          <Route
-            path="/about"
-            element={<About />}
-          />
-
-          <Route
-            path="/contact"
-            element={<Contact />}
-          />
-
-          <Route
-            path="/blog"
-            element={<Blog />}
-          />
-
-          {/* Location Pages */}
-
-          <Route
-            path="/pest-control-porur"
-            element={
-              <Porur
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-velachery"
-            element={
-              <Velachery
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-anna-nagar"
-            element={
-              <AnnaNagar
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-tambaram"
-            element={
-              <Tambaram
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-avadi"
-            element={
-              <Avadi
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-ambattur"
-            element={
-              <Ambattur
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-omr"
-            element={
-              <OMR
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-pallavaram"
-            element={
-              <Pallavaram
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          <Route
-            path="/pest-control-chromepet"
-            element={
-              <Chromepet
-                onBookClick={() => setIsBookingOpen(true)}
-              />
-            }
-          />
-
-          {/* Blog Pages */}
-
-          <Route
-            path="/blog/cockroach-control-chennai"
-            element={<CockroachControlChennai />}
-          />
-
-          <Route
-            path="/blog/termite-infestation-signs"
-            element={<TermiteInfestationSigns />}
-          />
-
-          <Route
-            path="/blog/pest-control-cost-chennai"
-            element={<PestControlCostChennai />}
-          />
-
-          <Route
-            path="/blog/rodent-control-guide"
-            element={<RodentControlGuide />}
-          />
+        <main>
 
           {/* ==========================================
-              ADMIN LOGIN
-              
-              /admin/login
+              Routes
           ========================================== */}
 
-          <Route
-            path="/admin/login"
-            element={<AdminLogin />}
-          />
+          <Routes>
 
-          {/* ==========================================
-              ADMIN DASHBOARD
-              
-              /admin
-          ========================================== */}
+            {/* Main Pages */}
 
-          <Route
-            path="/admin"
-            element={<AdminPanel />}
-          />
+            <Route
+              path="/"
+              element={
+                <Home
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
 
-          {/* ==========================================
-              BACKWARD COMPATIBILITY
-              
-              If something still opens /admin/panel,
-              redirect it to /admin
-          ========================================== */}
+            <Route
+              path="/services"
+              element={<Services />}
+            />
 
-          <Route
-            path="/admin/panel"
-            element={
-              <Navigate
-                to="/admin"
-                replace
-              />
-            }
-          />
+            <Route
+              path="/services/rodent-control"
+              element={<ServicePage type="rodent" />}
+            />
 
-          {/* Unknown routes */}
+            <Route
+              path="/services/termite-control"
+              element={<ServicePage type="termite" />}
+            />
 
-          <Route
-            path="*"
-            element={<Navigate to="/" replace />}
-          />
+            <Route
+              path="/services/cockroach-control"
+              element={<ServicePage type="cockroach" />}
+            />
 
-        </Routes>
+            <Route
+              path="/book"
+              element={<BookService />}
+            />
+
+            <Route
+              path="/about"
+              element={<About />}
+            />
+
+            <Route
+              path="/contact"
+              element={<Contact />}
+            />
+
+            <Route
+              path="/blog"
+              element={<Blog />}
+            />
+
+            {/* Location Pages */}
+
+            <Route
+              path="/pest-control-porur"
+              element={
+                <Porur
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-velachery"
+              element={
+                <Velachery
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-anna-nagar"
+              element={
+                <AnnaNagar
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-tambaram"
+              element={
+                <Tambaram
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-avadi"
+              element={
+                <Avadi
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-ambattur"
+              element={
+                <Ambattur
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-omr"
+              element={
+                <OMR
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-pallavaram"
+              element={
+                <Pallavaram
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            <Route
+              path="/pest-control-chromepet"
+              element={
+                <Chromepet
+                  onBookClick={() => setIsBookingOpen(true)}
+                />
+              }
+            />
+
+            {/* Blog Pages */}
+
+            <Route
+              path="/blog/cockroach-control-chennai"
+              element={<CockroachControlChennai />}
+            />
+
+            <Route
+              path="/blog/termite-infestation-signs"
+              element={<TermiteInfestationSigns />}
+            />
+
+            <Route
+              path="/blog/pest-control-cost-chennai"
+              element={<PestControlCostChennai />}
+            />
+
+            <Route
+              path="/blog/rodent-control-guide"
+              element={<RodentControlGuide />}
+            />
+
+            {/* ==========================================
+                ADMIN LOGIN
+
+                /admin/login
+            ========================================== */}
+
+            <Route
+              path="/admin/login"
+              element={<AdminLogin />}
+            />
+
+            {/* ==========================================
+                ADMIN DASHBOARD
+
+                /admin
+            ========================================== */}
+
+            <Route
+              path="/admin"
+              element={<AdminPanel />}
+            />
+
+            {/* ==========================================
+                BACKWARD COMPATIBILITY
+
+                If something still opens /admin/panel,
+                redirect it to /admin
+            ========================================== */}
+
+            <Route
+              path="/admin/panel"
+              element={
+                <Navigate
+                  to="/admin"
+                  replace
+                />
+              }
+            />
+
+            {/* Unknown routes */}
+
+            <Route
+              path="*"
+              element={<Navigate to="/" replace />}
+            />
+
+          </Routes>
+
+        </main>
+
+        {/* Global Area Content */}
 
         <LocalAreaContent />
 
@@ -319,5 +329,3 @@ function App() {
 }
 
 export default App;
-
-

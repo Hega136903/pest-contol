@@ -188,19 +188,19 @@ const PestControlCostChennai = () => (
               <td className="border p-3">Cockroach Control</td>
               <td className="border p-3">₹1,500</td>
               <td className="border p-3">₹3,500</td>
-              <td className="border p-3 font-semibold text-green-600">Save ₹1,000</td>
+              <td className="border p-3 font-semibold text-green-700">Save ₹1,000</td>
             </tr>
             <tr className="hover:bg-gray-50 bg-gray-50">
               <td className="border p-3">Rodent Control</td>
               <td className="border p-3">₹1,000</td>
               <td className="border p-3">₹2,500</td>
-              <td className="border p-3 font-semibold text-green-600">Save ₹500</td>
+              <td className="border p-3 font-semibold text-green-700">Save ₹500</td>
             </tr>
             <tr className="hover:bg-gray-50">
               <td className="border p-3">Termite Treatment</td>
               <td className="border p-3">₹2,500</td>
               <td className="border p-3">₹6,000</td>
-              <td className="border p-3 font-semibold text-green-600">Save ₹1,500</td>
+              <td className="border p-3 font-semibold text-green-700">Save ₹1,500</td>
             </tr>
           </tbody>
         </table>

@@ -307,7 +307,7 @@ const AdminPanel = () => {
               Completed
             </p>
 
-            <p className="text-3xl font-bold text-green-600 mt-2">
+            <p className="text-3xl font-bold text-green-700 mt-2">
               {statistics.completed}
             </p>
           </div>

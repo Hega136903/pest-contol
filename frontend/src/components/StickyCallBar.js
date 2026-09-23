@@ -18,7 +18,7 @@ const StickyCallBar = () => (
           href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-green-600 px-2 py-1 rounded-full hover:bg-green-50 transition-colors font-semibold text-xs whitespace-nowrap shadow-sm flex-shrink-0"
+          className="bg-white text-green-700 px-2 py-1 rounded-full hover:bg-green-50 transition-colors font-semibold text-xs whitespace-nowrap shadow-sm flex-shrink-0"
         >
           💬 Chat
         </a>
@@ -42,7 +42,7 @@ const StickyCallBar = () => (
           href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-green-600 px-4 py-1.5 rounded-full hover:bg-green-50 transition-colors font-semibold text-sm whitespace-nowrap shadow-sm hover:shadow"
+          className="bg-white text-green-700 px-4 py-1.5 rounded-full hover:bg-green-50 transition-colors font-semibold text-sm whitespace-nowrap shadow-sm hover:shadow"
         >
           💬 WhatsApp Chat
         </a>
