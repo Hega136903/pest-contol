@@ -8,21 +8,21 @@ const services = [
     description: 'Safe, eco-friendly rodent removal for kitchens, gardens, and offices.',
     duration: '30-60 mins',
     price: '₹799 onwards',
-    image: '/brown-rat-control.jpg'
+    image: '/brown-rat-control.webp'
   },
   {
     name: 'Termite Control',
     description: 'Long-lasting termite treatment for wood, furniture, and buildings.',
     duration: '1-2 hours',
     price: '₹1499 onwards',
-    image: '/termite-worker-control.jpg'
+    image: '/termite-worker-control.webp'
   },
   {
     name: 'Cockroach Control',
     description: 'Odorless, child-safe cockroach control for homes and restaurants.',
     duration: '45-90 mins',
     price: '₹999 onwards',
-    image: '/cockroach-control.jpg'
+    image: '/cockroach-control.webp'
   }
 ];
 

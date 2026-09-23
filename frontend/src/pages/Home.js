@@ -36,14 +36,14 @@ const Home = ({ onBookClick }) => (
       <meta property="og:url" content="https://www.wildgreenpest.in//" />
       <meta property="og:title" content="Pest Control Chennai | Rodent, Termite, Cockroach | Book Now" />
       <meta property="og:description" content="Best pest control services in Chennai. Expert rodent, termite & cockroach control. Same day service available." />
-      <meta property="og:image" content="https://www.wildgreenpest.in//logo.png" />
+      <meta property="og:image" content="https://www.wildgreenpest.in//logo.webp" />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://www.wildgreenpest.in//" />
       <meta name="twitter:title" content="Pest Control Chennai | Rodent, Termite, Cockroach" />
       <meta name="twitter:description" content="Professional pest control in Chennai - rodent, termite & cockroach elimination. Book now!" />
-      <meta name="twitter:image" content="https://www.wildgreenpest.in//logo.png" />
+      <meta name="twitter:image" content="https://www.wildgreenpest.in//logo.webp" />
     </Helmet>
     <BusinessSchema />
     <section className="relative mb-8 overflow-hidden rounded-2xl bg-green-950 p-5 shadow-xl sm:p-8">
@@ -112,7 +112,7 @@ const Home = ({ onBookClick }) => (
             </div>
             <div className="text-center">
               <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2">
-                <img src="/rat-after.png" alt="After professional rodent control - clean kitchen free from rats and droppings in Chennai" className="w-full h-24 object-cover rounded" />
+                <img src="/rat-after.webp" alt="After professional rodent control - clean kitchen free from rats and droppings in Chennai" className="w-full h-24 object-cover rounded" />
               </div>
               <span className="text-xs font-medium text-green-600">After: Rodent treatment and prevention guidance</span>
             </div>
@@ -212,7 +212,7 @@ const Home = ({ onBookClick }) => (
                 to="/services?service=rodent" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
-                Learn More
+                Learn More About Rodent Control
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow hover:shadow-md transition-shadow">
@@ -227,7 +227,7 @@ const Home = ({ onBookClick }) => (
                 to="/services?service=termite" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
-                Learn More
+                Learn More About Termite Control
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow hover:shadow-md transition-shadow">
@@ -242,7 +242,7 @@ const Home = ({ onBookClick }) => (
                 to="/services?service=cockroach" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
-                Learn More
+                Learn More About Cockroach Control
               </Link>
             </div>
             <div className="bg-white rounded-lg p-3 shadow hover:shadow-md transition-shadow">
@@ -257,7 +257,7 @@ const Home = ({ onBookClick }) => (
                 to="/about" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
-                Learn More
+                Learn More About Wild Green Pest Management
               </Link>
             </div>
           </div>
@@ -352,7 +352,7 @@ const Home = ({ onBookClick }) => (
 
     <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
       <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
-        <img src="/brown-rat-control.jpg" alt="Brown rat requiring professional rodent control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
+        <img src="/brown-rat-control.webp" alt="Brown rat requiring professional rodent control in Chennai" className="h-20 w-20 rounded-full object-cover mb-3" />
         <h2 className="font-semibold text-primary text-lg mb-2">Rodent Control Chennai</h2>
         <p className="text-sm text-gray-600 leading-relaxed">Best professional rodent control in Chennai. Safe, eco-friendly rodent removal for kitchens, gardens, and offices.</p>
       </div>

@@ -11,6 +11,6 @@ These locally stored service photos were downloaded from Unsplash on 2026-09-20 
 
 ## Pest photographs
 
-- `brown-rat-control.jpg`: Wikimedia Commons, Brown Rat by Mathias Baldwin Park, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Brown_Rat_(Rattus_norvegicus)_also_called_Norway_Rat_or_Common_Rat_-with_food_container_-_Mathias_Baldwin_Park,_Philadelphia,_Pennsylvania,_USA.jpg
+- `brown-rat-control.webp`: Wikimedia Commons, Brown Rat by Mathias Baldwin Park, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Brown_Rat_(Rattus_norvegicus)_also_called_Norway_Rat_or_Common_Rat_-with_food_container_-_Mathias_Baldwin_Park,_Philadelphia,_Pennsylvania,_USA.jpg
 - `termite-worker-control.jpg`: Wikimedia Commons, Termite Worker, license shown on the source page. https://commons.wikimedia.org/wiki/File:Termite_Worker_(10069598664).jpg
 - `cockroach-control.jpg`: Wikimedia Commons, Cockroach May 2007-1, license shown on the source page. https://commons.wikimedia.org/wiki/File:Cockroach_May_2007-1.jpg
