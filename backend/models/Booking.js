@@ -7,6 +7,13 @@ const BookingSchema = new mongoose.Schema(
     // Customer Information
     // ==========================================
 
+    requestType: {
+      type: String,
+      enum: ['booking', 'callback'],
+      default: 'booking',
+      required: true,
+    },
+
     fullName: {
       type: String,
       required: [true, 'Full name is required'],
@@ -25,7 +32,9 @@ const BookingSchema = new mongoose.Schema(
 
     address: {
       type: String,
-      required: [true, 'Address is required'],
+      required: function () {
+        return this.requestType === 'booking';
+      },
       trim: true,
       minlength: [5, 'Address must be at least 5 characters'],
       maxlength: [500, 'Address cannot exceed 500 characters'],
@@ -55,12 +64,16 @@ const BookingSchema = new mongoose.Schema(
 
     preferredDate: {
       type: Date,
-      required: [true, 'Preferred date is required'],
+      required: function () {
+        return this.requestType === 'booking';
+      },
     },
 
     preferredTime: {
       type: String,
-      required: [true, 'Preferred time is required'],
+      required: function () {
+        return this.requestType === 'booking';
+      },
       trim: true,
     },
 

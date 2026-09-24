@@ -26,7 +26,6 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
     const startupTimer = setTimeout(() => setServerStarting(true), 2500);
 
     try {
-      const today = new Date().toISOString().split('T')[0];
       const response = await fetch(`${API_URL}/api/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -34,14 +33,12 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
           fullName: form.fullName,
           mobile: form.mobile,
           service: form.service,
-          address: 'Quick Booking',
-          preferredDate: today,
-          preferredTime: '09:00 AM'
+          requestType: 'callback'
         })
       });
 
       if (response.ok) {
-        setSuccess('Booking received! We will call you within 30 minutes.');
+        setSuccess('Callback requested! We will call you within 30 minutes.');
         setForm({ fullName: '', mobile: '', service: 'Cockroach Control' });
         setTimeout(() => {
           onClose();
@@ -66,8 +63,8 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
       <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} />
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 max-w-md w-11/12 bg-white rounded-lg shadow-2xl p-6 sm:p-8">
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold">x</button>
-        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Free Inspection Booking</h2>
-        <p className="text-xs sm:text-sm text-gray-600 mb-6">Get a response in 30 minutes. No hidden charges.</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Request a Callback</h2>
+        <p className="text-xs sm:text-sm text-gray-600 mb-6">Tell us what you need help with and we will call you within 30 minutes.</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Your Name</label>
@@ -92,7 +89,7 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
           {error && <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded text-sm">{error}</div>}
           {serverStarting && <div className="bg-blue-50 border border-blue-200 text-blue-800 px-3 py-2 rounded text-sm" role="status">The server is starting. Please keep this booking window open.</div>}
           <button type="submit" disabled={loading} className="w-full bg-primary text-white py-3 rounded font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
-            {loading ? 'Booking...' : 'Book Free Inspection'}
+            {loading ? 'Requesting...' : 'Request a Callback'}
           </button>
         </form>
         <p className="text-xs text-gray-500 text-center mt-4">Or call us directly: <a href="tel:+918939320492" className="text-primary font-semibold">+91 8939 320 492</a></p>

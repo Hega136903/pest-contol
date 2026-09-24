@@ -14,6 +14,7 @@ exports.createBooking = async (req, res) => {
     const {
       fullName,
       mobile,
+      requestType = 'booking',
       address,
       service,
       preferredDate,
@@ -24,17 +25,23 @@ exports.createBooking = async (req, res) => {
     // Validate required fields
     // ------------------------------------------
 
-    if (
-      !fullName ||
-      !mobile ||
-      !address ||
-      !service ||
-      !preferredDate ||
-      !preferredTime
-    ) {
+    if (!['booking', 'callback'].includes(requestType)) {
       return res.status(400).json({
         success: false,
-        error: 'All required booking fields must be provided.',
+        error: 'Invalid request type.',
+      });
+    }
+
+    const hasRequiredBookingDetails =
+      address && preferredDate && preferredTime;
+
+    if (!fullName || !mobile || !service ||
+      (requestType === 'booking' && !hasRequiredBookingDetails)) {
+      return res.status(400).json({
+        success: false,
+        error: requestType === 'callback'
+          ? 'Name, mobile, and service are required.'
+          : 'All required booking fields must be provided.',
       });
     }
 
@@ -55,15 +62,21 @@ exports.createBooking = async (req, res) => {
     // Create booking
     // ------------------------------------------
 
-    const booking = await Booking.create({
+    const bookingData = {
       fullName: String(fullName).trim(),
       mobile: cleanMobile,
-      address: String(address).trim(),
+      requestType,
       service: String(service).trim(),
-      preferredDate,
-      preferredTime: String(preferredTime).trim(),
       completed: false,
-    });
+    };
+
+    if (requestType === 'booking') {
+      bookingData.address = String(address).trim();
+      bookingData.preferredDate = preferredDate;
+      bookingData.preferredTime = String(preferredTime).trim();
+    }
+
+    const booking = await Booking.create(bookingData);
 
     return res.status(201).json({
       success: true,
@@ -247,6 +260,7 @@ exports.exportCSV = async (req, res) => {
       .lean();
 
     const fields = [
+      'requestType',
       'fullName',
       'mobile',
       'address',

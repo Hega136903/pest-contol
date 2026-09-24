@@ -403,7 +403,9 @@ const AdminPanel = () => {
                         </div>
 
                         <div className="text-sm text-gray-500">
-                          {booking.address}
+                          {booking.requestType === 'callback'
+                            ? 'Callback requested'
+                            : booking.address}
                         </div>
                       </td>
 
@@ -423,13 +425,15 @@ const AdminPanel = () => {
                       </td>
 
                       <td className="p-4">
-                        {formatDate(
-                          booking.preferredDate
-                        )}
+                        {booking.requestType === 'callback'
+                          ? 'To be scheduled'
+                          : formatDate(booking.preferredDate)}
                       </td>
 
                       <td className="p-4">
-                        {booking.preferredTime}
+                        {booking.requestType === 'callback'
+                          ? 'After callback'
+                          : booking.preferredTime}
                       </td>
 
                       <td className="p-4">
@@ -515,19 +519,23 @@ const AdminPanel = () => {
 
                     <p>
                       <strong>Address:</strong>{" "}
-                      {booking.address}
+                      {booking.requestType === 'callback'
+                        ? 'To be confirmed'
+                        : booking.address}
                     </p>
 
                     <p>
                       <strong>Date:</strong>{" "}
-                      {formatDate(
-                        booking.preferredDate
-                      )}
+                      {booking.requestType === 'callback'
+                        ? 'To be scheduled'
+                        : formatDate(booking.preferredDate)}
                     </p>
 
                     <p>
                       <strong>Time:</strong>{" "}
-                      {booking.preferredTime}
+                      {booking.requestType === 'callback'
+                        ? 'After callback'
+                        : booking.preferredTime}
                     </p>
 
                     <p>
