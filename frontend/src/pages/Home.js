@@ -65,7 +65,7 @@ const Home = ({ onBookClick }) => (
             <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Quick appointments</span>
           </div>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-            <Link to="/book" className="inline-block bg-yellow-300 text-green-950 px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-200 font-bold text-sm sm:text-base">Book a Free Inspection</Link>
+            <button onClick={onBookClick} className="inline-block bg-yellow-300 text-green-950 px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-200 font-bold text-sm sm:text-base">Book a Free Inspection</button>
             <a href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai." target="_blank" rel="noreferrer" className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base">WhatsApp Us</a>
           </div>
           <div className="mt-4 flex flex-col gap-1 text-sm text-green-50 sm:flex-row sm:gap-4 md:justify-start">
