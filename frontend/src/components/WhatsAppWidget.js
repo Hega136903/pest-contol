@@ -1,9 +1,11 @@
 import React from 'react';
+import { trackPhoneClick, trackWhatsAppClick } from '../analytics';
 
 const WhatsAppWidget = () => (
   <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 sm:gap-3 sm:bottom-6 sm:right-6">
     <a
       href="tel:+918939320492"
+      onClick={trackPhoneClick}
       aria-label="Call Wild Green Pest Management"
       className="inline-flex items-center gap-1 sm:gap-2 rounded-full bg-white px-2.5 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-semibold text-gray-800 shadow-lg ring-1 ring-gray-200 transition-transform hover:-translate-y-0.5 hover:shadow-xl"
     >
@@ -12,6 +14,7 @@ const WhatsAppWidget = () => (
     </a>
     <a
       href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
+      onClick={trackWhatsAppClick}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Wild Green Pest Management on WhatsApp"

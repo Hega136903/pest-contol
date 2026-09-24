@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackLead } from '../analytics';
 
 const API_URL = (
   process.env.REACT_APP_API_URL ||
@@ -38,6 +39,7 @@ const QuickBookingModal = ({ isOpen, onClose }) => {
       });
 
       if (response.ok) {
+        trackLead('quick_booking', form.service);
         setSuccess('Callback requested! We will call you within 30 minutes.');
         setForm({ fullName: '', mobile: '', service: 'Cockroach Control' });
         setTimeout(() => {

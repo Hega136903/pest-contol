@@ -1,5 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { trackLead } from '../analytics';
 
 const API_URL = (
   process.env.REACT_APP_API_URL ||
@@ -38,6 +39,7 @@ const BookService = () => {
         body: JSON.stringify(form)
       });
       if (res.ok) {
+        trackLead('booking_form', form.service);
         setSuccess('Booking successful! We will contact you soon.');
         setForm(initialState);
       } else {

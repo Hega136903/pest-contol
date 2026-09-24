@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
+  useLocation,
 } from "react-router-dom";
+import { trackPageView } from "./analytics";
 
 import { Helmet } from "react-helmet";
 
@@ -51,11 +53,24 @@ import LocalAreaContent from "./components/LocalAreaContent";
 
 import "./tailwind.css";
 
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(
+      location.pathname + location.search + location.hash
+    );
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
     <Router>
+      <AnalyticsTracker />
       <SiteSEO />
       <OrganizationSchema />
 

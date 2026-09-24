@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackPhoneClick, trackWhatsAppClick } from '../analytics';
 
 const StickyCallBar = () => (
   <div className="sticky top-0 z-50 bg-green-700 text-white shadow-lg">
@@ -6,7 +7,7 @@ const StickyCallBar = () => (
     <div className="sm:hidden px-3 py-2">
       <div className="flex items-center justify-between gap-2">
         <div className="flex flex-col gap-1 flex-1">
-          <a href="tel:+918939320492" className="hover:text-green-100 transition-colors text-xs font-semibold">
+          <a href="tel:+918939320492" onClick={trackPhoneClick} className="hover:text-green-100 transition-colors text-xs font-semibold">
             📞+91 8939 320 492
           </a>
           <div className="flex items-center gap-2 text-xs font-medium">
@@ -16,6 +17,7 @@ const StickyCallBar = () => (
         </div>
         <a
           href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
+          onClick={trackWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white text-green-700 px-2 py-1 rounded-full hover:bg-green-50 transition-colors font-semibold text-xs whitespace-nowrap shadow-sm flex-shrink-0"
@@ -29,7 +31,7 @@ const StickyCallBar = () => (
     <div className="hidden sm:flex px-4 py-3">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
         <div className="flex items-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap text-xs sm:text-sm font-semibold">
-          <a href="tel:+918939320492" className="hover:text-green-100 transition-colors">
+          <a href="tel:+918939320492" onClick={trackPhoneClick} className="hover:text-green-100 transition-colors">
             📞+91 8939 320 492
           </a>
           <span className="opacity-70">•</span>
@@ -40,6 +42,7 @@ const StickyCallBar = () => (
 
         <a
           href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai."
+          onClick={trackWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white text-green-700 px-4 py-1.5 rounded-full hover:bg-green-50 transition-colors font-semibold text-sm whitespace-nowrap shadow-sm hover:shadow"
