@@ -64,9 +64,13 @@ const Home = ({ onBookClick }) => (
             <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Serving Chennai</span>
             <span className="text-xs bg-white/15 text-white px-2 py-1 rounded">Quick appointments</span>
           </div>
-          <div className="flex gap-3 justify-center md:justify-start">
-            <Link to="/book" className="inline-block bg-yellow-300 text-green-950 px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-200 font-bold text-sm sm:text-base">Book a service</Link>
-            <button onClick={onBookClick} className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base">Free inspection</button>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            <Link to="/book" className="inline-block bg-yellow-300 text-green-950 px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-200 font-bold text-sm sm:text-base">Book a Free Inspection</Link>
+            <a href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai." target="_blank" rel="noreferrer" className="inline-block bg-white text-primary px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-gray-100 font-medium text-sm sm:text-base">WhatsApp Us</a>
+          </div>
+          <div className="mt-4 flex flex-col gap-1 text-sm text-green-50 sm:flex-row sm:gap-4 md:justify-start">
+            <a href="tel:+918939320492" className="hover:text-white hover:underline">Call: +91 8939 320 492</a>
+            <a href="https://wa.me/918939320492?text=Hi%20Wild%20Green%20Pest%20Management%2C%20I%20need%20pest%20control%20service%20in%20Chennai." target="_blank" rel="noreferrer" className="hover:text-white hover:underline">WhatsApp for a quick response</a>
           </div>
         </div>
       </div>
@@ -74,12 +78,12 @@ const Home = ({ onBookClick }) => (
 
     {/* Customer Reviews Section */}
     <section className="mb-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 sm:p-8">
-      <h2 className="text-2xl font-bold text-primary mb-6 text-center">What Chennai Customers Say</h2>
+      <h2 className="text-2xl font-bold text-primary mb-6 text-center">Customer Feedback</h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {testimonials.map((t, i) => (
           <div key={i} className="bg-white rounded-lg shadow p-4 border-l-4 border-primary">
             <div className="flex items-center mb-2">
-              <span className="text-yellow-700 text-sm">5 stars</span>
+              <span className="text-gray-600 text-sm">Customer feedback</span>
             </div>
             <p className="text-sm text-gray-700 mb-3 italic">"{t.text}"</p>
             <div className="border-t pt-2">
@@ -140,7 +144,7 @@ const Home = ({ onBookClick }) => (
             </div>
           </div>
           <div className="mt-3 text-center">
-            <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">5-year warranty</span>
+            <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Treatment and prevention guidance</span>
           </div>
         </div>
 
@@ -162,7 +166,7 @@ const Home = ({ onBookClick }) => (
             </div>
           </div>
           <div className="mt-3 text-center">
-            <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Same-day results</span>
+            <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Treatment plan based on inspection</span>
           </div>
         </div>
       </div>
@@ -209,7 +213,7 @@ const Home = ({ onBookClick }) => (
               <p className="text-xs text-center font-medium">Rodent Control</p>
               <p className="text-xs text-center text-gray-500 mb-2">Inspection and prevention</p>
               <Link 
-                to="/services?service=rodent" 
+                to="/services/rodent-control" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
                 Learn More About Rodent Control
@@ -224,7 +228,7 @@ const Home = ({ onBookClick }) => (
               <p className="text-xs text-center font-medium">Termite Treatment</p>
               <p className="text-xs text-center text-gray-500 mb-2">Inspection and protection</p>
               <Link 
-                to="/services?service=termite" 
+                to="/services/termite-control" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
                 Learn More About Termite Control
@@ -239,7 +243,7 @@ const Home = ({ onBookClick }) => (
               <p className="text-xs text-center font-medium">Cockroach Control</p>
               <p className="text-xs text-center text-gray-500 mb-2">Kitchen treatment</p>
               <Link 
-                to="/services?service=cockroach" 
+                to="/services/cockroach-control" 
                 className="block w-full text-center bg-primary text-white py-1 px-2 rounded hover:bg-green-700 transition-colors text-xs"
               >
                 Learn More About Cockroach Control
@@ -267,9 +271,9 @@ const Home = ({ onBookClick }) => (
         <div className="mt-6 text-center">
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ Eco-Friendly Methods</span>
-            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ Child & Pet Safe</span>
-            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ 24/7 Emergency Service</span>
-            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ 1-Year Warranty</span>
+            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ Family-conscious guidance</span>
+            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ Chennai service coverage</span>
+            <span className="bg-white px-4 py-2 rounded-full text-primary font-medium shadow">✓ Follow-up guidance</span>
           </div>
         </div>
       </div>
@@ -309,7 +313,7 @@ const Home = ({ onBookClick }) => (
             <div className="flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm mb-2">6</div>
               <h4 className="font-semibold text-gray-800 text-sm mb-1">Warranty</h4>
-              <p className="text-xs text-gray-600">1-year guarantee</p>
+              <p className="text-xs text-gray-600">Follow-up guidance</p>
             </div>
           </div>
         </div>
@@ -329,7 +333,7 @@ const Home = ({ onBookClick }) => (
           <div className="flex flex-col items-center text-center">
             <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">3</div>
             <h4 className="font-semibold text-gray-800 mb-2">Safe Treatment</h4>
-            <p className="text-sm text-gray-600">Eco-friendly chemicals with child & pet safety certification</p>
+            <p className="text-sm text-gray-600">Treatment guidance tailored to your property</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">4</div>
@@ -344,7 +348,7 @@ const Home = ({ onBookClick }) => (
           <div className="flex flex-col items-center text-center">
             <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">6</div>
             <h4 className="font-semibold text-gray-800 mb-2">Warranty</h4>
-            <p className="text-sm text-gray-600">Guaranteed protection with service warranty up to 1 year</p>
+            <p className="text-sm text-gray-600">Follow-up guidance after treatment</p>
           </div>
         </div>
       </div>
